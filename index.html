@@ -34,10 +34,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- custom css -->
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
-
         :root {
             --header-height: 3rem;
             --nav-width: 68px;
@@ -89,8 +89,8 @@
         }
 
         .header_img {
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
             display: flex;
             justify-content: center;
             border-radius: 50%;
@@ -245,17 +245,19 @@
 <body>
 
     <body id="body-pd">
-        <header class="header bg-light" id="header">
+        <header class="header" id="header">
             <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
             <div class="row">
-                <div class="col text-center pt-md-1">
-                    <a class="text-dark">
+                <div class="col text-center">
+                    <a class="">
                         <span class="buttondark">
                             <label class="switch" for="darkSwitch">
                                 <input type="checkbox" id="darkSwitch">
                                 <!-- <span class="slider round"></span> -->
-                                <i onclick="myFunction(this)" class='bx bxs-moon nav_icon'></i>
-                                <script src="js/dark-mode-switch.min.js"></script>
+                                <div class="darktogel">
+                                    <i onclick="myFunction(this)" class='bx bxs-moon nav_icon'></i>
+                                    <script src="js/dark-mode-switch.min.js"></script>
+                                </div>
                             </label>
                         </span>
                     </a>
@@ -297,7 +299,7 @@
         <a onclick="topFunction()">
             <div id="myBtn" class="scroll-up text-center butonUP">
                 <span>
-                    <i class='pt-2 bx bx-up-arrow-alt'></i>
+                    <i class='text-white pt-2 bx bx-up-arrow-alt'></i>
                 </span>
             </div>
         </a>
@@ -325,18 +327,18 @@
                                 <div class="row no-gutters slider-text align-items-center justify-content-center">
                                     <h1 class="quote">Still <span>The Highest</span></h1>
                                     <h1 class="quote">Still <span> The Best </span></h1>
-                                    <h1 class="quote"><span>AE </span>AE!</h1>
+                                    <!-- <h1 class="quote"><span>AE </span>AE!</h1> -->
                                 </div>
                             </div>
                         </div>
                         <button class="cntrl carousel-control-prev" type="button"
                             data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <i class='bx bx-chevron-left-circle carouselbtn'></i>
+                            <i class='bx bxs-chevron-left-circle carouselbtn'></i>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="cntrl carousel-control-next" type="button"
                             data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <i class='bx bx-chevron-right-circle carouselbtn'></i>
+                            <i class='bx bxs-chevron-right-circle carouselbtn'></i>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
@@ -346,7 +348,7 @@
 
             <section id="about" class="about">
                 <div class="container">
-                    <div class="container pb-2 px-5">
+                    <div class="container pb-2 px-5 pt-4">
                         <div class="row">
                             <div class="col-md text-md-start">
                                 <img class="logoae pt-3" src="img/logoae.png">
@@ -473,7 +475,7 @@
                     </div>
             </section>
             <section id="division">
-                <div class="container pt-3 pb-5 px-5">
+                <div class="container pt-5 pb-5 px-5">
                     <div class="row">
                         <div class="col pt-5 text-center">
                             <h2 class="text-dark quote text-md-start">Divisi <span class="judul">HIMAMO</span>
@@ -485,10 +487,10 @@
                         <div class="pt-3 col-md-10">
                             <div class="owl-carousel owl-theme">
                                 <div class="block block-1">
-                                    <h1 class="text-dark" >Kominfo.</h1>
+                                    <h1 class="text-dark">Kominfo.</h1>
                                 </div>
                                 <div class="block block-2">
-                                    <h1 class="text-dark" >Kaderisasi.</h1>
+                                    <h1 class="text-dark">Kaderisasi.</h1>
                                 </div>
                                 <div class="block block-3">
                                     <h1 class="text-dark">Kreativitas.</h1>
@@ -605,20 +607,11 @@
                 x.classList.toggle("bxs-sun");
             }
         </script>
-        <!-- buttontoUP -->
-        <script>
-            $(document).ready(function () {
-                $(window).scroll(function () {
-                    var scroll = $(window).scrollTop();
-                    if (scroll == 0) {
-                        $(".bg-light").css("background-color", "transparent");
-                    } else if (scroll > 300 && scroll < 900) {} else {}
-                })
-            })
-        </script>
         <script>
             $('.owl-carousel').owlCarousel({
                 stagePadding: 0,
+                animateOut: 'slideOutDown',
+                animateIn: 'flipInX',
                 loop: true,
                 margin: 10,
                 nav: false,
@@ -631,7 +624,7 @@
                         items: 1
                     },
                     1000: {
-                        items: 2 
+                        items: 2
                     }
                 }
             })

@@ -31,5 +31,15 @@
   color: white !important;
 }
 
+[data-theme="dark"] #header {
+  background-color: #393e46;
+}
 
+[data-theme="dark"] .darktogel {
+  
+  background-color: rgba(255, 255, 255, 0.4);
+}
+/* [data-theme="dark"] .owl-carousel .block .text-dark {
+  color: white !important;
+} */
 
