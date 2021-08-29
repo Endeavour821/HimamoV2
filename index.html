@@ -26,6 +26,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
+    <!-- owlcarousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
@@ -524,9 +527,24 @@
                 <div class="container pt-2 pb-5 px-5">
                     <div class="row">
                         <div class="col-md-10">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item"><h4>1</h4></div>
+                                <div class="item"><h4>2</h4></div>
+                                <div class="item"><h4>3</h4></div>
+                                <div class="item"><h4>4</h4></div>
+                                <div class="item"><h4>5</h4></div>
+                                <div class="item"><h4>6</h4></div>
+                                <div class="item"><h4>7</h4></div>
+                                <div class="item"><h4>8</h4></div>
+                                <div class="item"><h4>9</h4></div>
+                                <div class="item"><h4>10</h4></div>
+                                <div class="item"><h4>11</h4></div>
+                                <div class="item"><h4>12</h4></div>
+                            </div>
                         </div>
                         <div class="col pt-4 text-center">
-                            <h2 class="text-dark quote text-md-end pt-5">Sejarah Kepemimpinan <span class="judul">HIMAMO</span>
+                            <h2 class="text-dark quote text-md-end pt-5">Sejarah Kepemimpinan <span
+                                    class="judul">HIMAMO</span>
                             </h2>
                             <p class="text-dark pt-2 text-md-end">
                                 Sejarah Kepemimpinan Ketua Himpunan Mahasiswa Jurusan Teknik Otomasi Manufaktur dan
@@ -540,6 +558,11 @@
         <script src="js/index.js"></script>
         <!-- js gue -->
         <script type='text/javascript' src='js/main.js'></script>
+        <!--owlcarousel-->
+        <script src="js/owl.carousel.min.js"></script>
+        <!--jquery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
@@ -583,11 +606,13 @@
                 // Your code to run since DOM is loaded and ready
             });
         </script>
+        <!-- darktoggle -->
         <script>
             function myFunction(x) {
                 x.classList.toggle("bxs-sun");
             }
         </script>
+        <!-- horizontalscroll -->
         <script>
             var blocks = document.getElementsByClassName("block");
             var container = document.getElementsByClassName("division-container");
@@ -598,6 +623,7 @@
                 springEffect: 0.8,
             });
         </script>
+        <!-- buttontoUP -->
         <script>
             $(document).ready(function () {
                 $(window).scroll(function () {
