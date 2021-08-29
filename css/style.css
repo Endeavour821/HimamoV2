@@ -1,0 +1,269 @@
+/* #################################################### */
+/* The switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* #################################################### */
+
+/* carousel */
+
+.carouselbtn {
+    font-size: 2em;
+}
+
+.drk:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.carousel-caption {
+    z-index: 9;
+}
+
+.gbr {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    object-fit: cover;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-40%);
+    bottom: initial;
+}
+
+.cntrl {
+    visibility: hidden;
+}
+
+.carousel:hover .cntrl {
+    visibility: visible;
+}
+
+/* ############################################################## */
+.quote {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+}
+
+.slider-text2 p {
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+}
+
+.slider-text h1 {
+    font-size: 40px;
+    color: #fff;
+    line-height: 1.1;
+    font-weight: 700;
+    font-style: italic;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.slider-text {
+    padding: 0px 0;
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+}
+
+@media screen and (min-width: 768px) {
+    .slider-text h1 {
+        font-size: 80px;
+        color: #fff;
+        line-height: 1.1;
+        font-weight: 700;
+        font-style: italic;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: #fff;
+    }
+
+    .slider-text {
+        padding: 30px 0;
+        -webkit-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+    }
+
+    .slider-text2 h1 {
+        font-size: 80px;
+        color: #fff;
+        line-height: 1.1;
+        font-weight: 700;
+        font-style: italic;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        /* Will override color (regardless of order) */
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: #fff;
+    }
+}
+
+.slider-text h1 span {
+    color: #b7472a;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: 0px;
+}
+
+.slider-text2 h1 span {
+    color: #b7472a;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: 0px;
+}
+
+
+/* ################## */
+.about {
+    /* background: #b7472a; */
+    align-items: center;
+    text-align: center;
+}
+
+.about .intro {
+    z-index: 0;
+    position: relative;
+}
+
+.intro {
+    width: 100%;
+    background: #b7472a;
+    padding: 30px;
+}
+
+.intro.color-1 {
+    background: #ab4227;
+}
+
+.intro.color-2 {
+    background: #a23f25;
+}
+
+.intro .icon {
+    margin-right: 20px;
+}
+
+.intro .icon span {
+    font-size: 60px;
+    color: #fff;
+}
+
+.intro .text {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.intro .text h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* ######################################## */
+
+.logoae {
+    width: 60%;
+}
+
+.judul {
+    color: var(--first-color);
+}
+
+.parallax {
+    /* The image used */
+    background-image: url(../img/about.png);
+
+
+    /* Set a specific height */
+    min-height: auto;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* ################################################ */
+
+
+#division {
+    overflow: hidden;
+    height: 350px;
+}
+
+#division .block {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    margin: 10px 50px 20px 80px;
+}
+
+#division h1 {
+    position: absolute;
+    font-family: "spectral";
+    font-weight: 700;
+}
+
+#division .block-1 {
+    background: url(../img/img-one.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#division .block-2 {
+    background: url(../img/img-two.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#division .block-3 {
+    background: url(../img/img-three.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#division .block-4 {
+    background: url(../img/img-four.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#division .block-5 {
+    background: url(../img/img-five.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+#division .block-1 h1,
+#division .block-3 h1,
+#division .block-5 h1 {
+    bottom: 0;
+    right: -60px;
+}
+
+#division .block-2 h1,
+#division .block-4 h1 {
+    right: -60px;
+}

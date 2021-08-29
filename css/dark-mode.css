@@ -1,0 +1,35 @@
+[data-theme="dark"] {
+  background-color: #191d24 !important;
+  color: #eee;
+}
+
+[data-theme="dark"] .bg-light {
+  background-color: #393e46 !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: #222831 !important;
+}
+
+[data-theme="dark"] .bg-black {
+  background-color: #eee !important;
+}
+
+[data-theme="dark"] .text-dark {
+  color: rgba(255, 255, 255) !important;
+}
+
+[data-theme="dark"] .vertical-nav {
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .nav-link:focus {
+  color: white !important;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: white !important;
+}
+
+
+
