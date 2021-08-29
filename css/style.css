@@ -103,6 +103,32 @@
     transform: rotate(-4deg);
 }
 
+
+@media (max-width: 768px) {
+
+    .owl-carousel .block-1 h1,
+    .owl-carousel .block-3 h1,
+    .owl-carousel .block-5 h1,
+    .owl-carousel .block-7 h1,
+    .owl-carousel .block-9 h1,
+    .owl-carousel .block-11 h1 {
+        left: 5%;
+        top: 85%;
+        align-items: center;
+    }
+
+    .owl-carousel .block-2 h1,
+    .owl-carousel .block-4 h1,
+    .owl-carousel .block-6 h1,
+    .owl-carousel .block-8 h1,
+    .owl-carousel .block-10 h1,
+    .owl-carousel .block-12 h1 {
+        left: 5%;
+        top: 85%;
+        align-items: center;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .slider-text h1 {
         font-size: 80px;
@@ -136,6 +162,32 @@
         -webkit-text-stroke-width: .5px;
         -webkit-text-stroke-color: #fff;
     }
+
+    .owl-carousel {
+        overflow: hidden;
+        height: auto;
+        padding-left: 5rem;
+    }
+
+    .owl-carousel .block-1 h1,
+    .owl-carousel .block-3 h1,
+    .owl-carousel .block-5 h1,
+    .owl-carousel .block-7 h1,
+    .owl-carousel .block-9 h1,
+    .owl-carousel .block-11 h1 {
+        bottom: 0;
+        right: -23%;
+    }
+
+    .owl-carousel .block-2 h1,
+    .owl-carousel .block-4 h1,
+    .owl-carousel .block-6 h1,
+    .owl-carousel .block-8 h1,
+    .owl-carousel .block-10 h1,
+    .owl-carousel .block-12 h1 {
+        right: -23%;
+    }
+
 }
 
 .slider-text h1 span {
@@ -222,108 +274,6 @@
     background-size: cover;
 }
 
-
-/* ################################################ */
-
-
-#division {
-    overflow: hidden;
-    height: 350px;
-}
-
-#division .block {
-    position: relative;
-    width: 300px;
-    height: 250px;
-    margin: 10px 50px 20px 80px;
-}
-
-#division h1 {
-    position: absolute;
-    font-family: "spectral";
-    font-weight: 700;
-}
-
-#division .block-1 {
-    background: url(../img/img-one.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-2 {
-    background: url(../img/img-two.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-3 {
-    background: url(../img/img-three.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-4 {
-    background: url(../img/img-four.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-5 {
-    background: url(../img/img-five.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-6 {
-    background: url(../img/img-one.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-7 {
-    background: url(../img/img-two.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-8 {
-    background: url(../img/img-three.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-9 {
-    background: url(../img/img-four.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-10 {
-    background: url(../img/img-five.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-11 {
-    background: url(../img/img-four.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-12 {
-    background: url(../img/img-five.jpeg) no-repeat 50% 50%;
-    background-size: cover;
-}
-
-#division .block-1 h1,
-#division .block-3 h1,
-#division .block-5 h1,
-#division .block-7 h1,
-#division .block-9 h1,
-#division .block-11 h1 {
-    bottom: 0;
-    right: -60px;
-}
-
-#division .block-2 h1,
-#division .block-4 h1,
-#division .block-6 h1,
-#division .block-8 h1,
-#division .block-10 h1,
-#division .block-12 h1 {
-    right: -60px;
-}
-
-/* ########################################## */
 #about {
     padding-top: 3rem;
     marrgin-top: -3rem;
@@ -354,8 +304,82 @@
     justify-content: center;
 }
 
-.owl-carousel .item {
-    width: 50px;
-    height: 50px;
-    background-color: black;
+/* ################################################## */
+.owl-carousel {
+    overflow: hidden;
+    height: auto;
+    /* padding-left: 5rem; */
+}
+
+.owl-carousel .block {
+    position: relative;
+    width: 18em;
+    height: 15em;
+    margin: 0px 50px 20px 0px;
+}
+
+.owl-carousel h1 {
+    position: absolute;
+    font-family: "spectral";
+    font-weight: 700;
+}
+
+.owl-carousel .block-1 {
+    background: url(../img/img-one.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-2 {
+    background: url(../img/img-two.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-3 {
+    background: url(../img/img-three.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-4 {
+    background: url(../img/img-four.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-5 {
+    background: url(../img/img-five.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-6 {
+    background: url(../img/img-one.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-7 {
+    background: url(../img/img-two.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-8 {
+    background: url(../img/img-three.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-9 {
+    background: url(../img/img-four.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-10 {
+    background: url(../img/img-five.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-11 {
+    background: url(../img/img-four.jpeg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.owl-carousel .block-12 {
+    background: url(../img/img-five.jpeg) no-repeat 50% 50%;
+    background-size: cover;
 }
