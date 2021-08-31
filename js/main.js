@@ -5,13 +5,19 @@ window.onscroll = function () {
     scrollFunction()
 };
 
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+//saat scroll ganti bg header 
 function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
         if (document.body.getAttribute("data-theme", "dark")) {
             document.getElementById("header").style.background = "#393e46";
         } else {
-
             document.getElementById("header").style.background = "#f8f9fa";
         }
     } else {
@@ -20,8 +26,73 @@ function scrollFunction() {
     }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+$(document).ready(function () {
+    $('.owl-one').owlCarousel({
+        stagePadding: 0,
+        autoplay: true,
+        loop: false,
+        margin: 10,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
+
+    $('.featured-carousel').owlCarousel({
+        loop: true,
+        stagePadding: -50,
+        autoplay: true,
+        nav: false,
+        dots: false,
+        rtl: true,
+        autoplayHoverPause: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 2
+            }
+        }
+    });
+
+    $('.carousel-testimony').owlCarousel({
+        center: true,
+        loop: true,
+        autoplay: true,
+        autoplaySpeed:2000,
+        items:1,
+        margin: 30,
+        stagePadding: 0,
+        nav: false,
+        dots: false,
+        responsive:{
+            0:{
+                items: 1
+            },
+            600:{
+                items: 2
+            },
+            1000:{
+                items: 3
+            }
+        }
+    });
+});
+
+// toggledark       
+function myFunction(x) {
+        x.classList.toggle("bxs-sun");
 }
