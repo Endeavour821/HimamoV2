@@ -30,12 +30,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- animate css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- custom css -->
     <style>
         :root {
@@ -43,7 +37,7 @@
             --nav-width: 68px;
             --first-color: #028784;
             --first-color-light: #b2d8d8;
-            --white-color: #F7F6FB;
+            --white-color: #f7f6fb00;
             --body-font: 'Karla', sans-serif;
             --normal-font-size: 1rem;
             --z-fixed: 100
@@ -147,11 +141,11 @@
 
         .nav_logo-icon {
             font-size: 1.25rem;
-            color: var(--white-color)
+            color: #fff;
         }
 
         .nav_logo-name {
-            color: var(--white-color);
+            color: #fff;
             font-weight: 700
         }
 
@@ -163,7 +157,7 @@
         }
 
         .nav_link:hover {
-            color: var(--white-color)
+            color: #fff;
         }
 
         .nav_icon {
@@ -183,16 +177,16 @@
         }
 
         .active {
-            color: var(--white-color)
+            color: #fff;
         }
 
-        .active::before {
+        .nav_list .active::before {
             content: '';
             position: absolute;
             left: 0;
             width: 2px;
             height: 32px;
-            background-color: var(--white-color)
+            background-color: #fff;
         }
 
         .height-100 {
@@ -458,8 +452,16 @@
                         <div class="row">
                             <div class="col pt-4">
                                 <div class="row no-gutters slider-text text-md-start">
-                                    <h1 class="quote">14 <span>November </span></h1>
-                                    <h1 class="quote"><span>19</span>95</h1>
+                                    <!-- <div class="row">
+                                        <div class="col-md">
+                                            <h1 class="value quote" count="14">0</h1>
+                                        </div>
+                                        <div class="col-md">
+                                            <h1 class="bulan quote"><span>November</span></h1>
+                                        </div>
+                                    </div>
+                                    <h1 class="value quote" count="1995">0</h1> -->
+                                    <h1 class="quote">14 <span>November</span> <span>19</span>95</h1>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -532,7 +534,7 @@
                 <div class="container pt-4 pb-5 px-5">
                     <div class="row">
                         <div class="col-md-8 text-md-start">
-                            <div class="featured-carousel owl-carousel owl-theme">
+                            <div class="featured-carousel owl-carousel">
                                 <div class="item">
                                     <div class="work">
                                         <div class="img d-flex align-items-end justify-content-center"
@@ -613,10 +615,10 @@
             </section>
             <section id="prestation" class="about">
                 <div class="parallax2">
-                    <div class="container pt-5 pb-5 px-md-5">
+                    <div class="container pt-5 pb-5 px-5">
                         <div class="row justify-content-center mb-4">
                             <div class="col-md-7 text-center">
-                                <h1 class="mb-3 quote">Apa Kata <span class="judul">Mereka?</span></h1>
+                                <h1 class="mb-3 text-white quote">Apa Kata <span class="judul">Mereka?</span></h1>
                             </div>
                         </div>
                         <div class="row">

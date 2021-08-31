@@ -31,8 +31,9 @@ $(document).ready(function () {
         stagePadding: 0,
         autoplay: true,
         loop: false,
-        margin: 10,
+        margin: 30,
         nav: false,
+        autoplaySpeed: 2000,
         dots: false,
         responsive: {
             0: {
@@ -51,6 +52,7 @@ $(document).ready(function () {
         loop: true,
         stagePadding: -50,
         autoplay: true,
+        autoplaySpeed: 2000,
         nav: false,
         dots: false,
         rtl: true,
@@ -72,20 +74,20 @@ $(document).ready(function () {
         center: true,
         loop: true,
         autoplay: true,
-        autoplaySpeed:2000,
-        items:1,
+        autoplaySpeed: 2000,
+        items: 1,
         margin: 30,
         stagePadding: 0,
         nav: false,
-        dots: false,
-        responsive:{
-            0:{
+        dots: true,
+        responsive: {
+            0: {
                 items: 1
             },
-            600:{
+            600: {
                 items: 2
             },
-            1000:{
+            1000: {
                 items: 3
             }
         }
@@ -94,5 +96,27 @@ $(document).ready(function () {
 
 // toggledark       
 function myFunction(x) {
-        x.classList.toggle("bxs-sun");
+    x.classList.toggle("bxs-sun");
 }
+
+//counter up
+const counters = document.querySelectorAll('.value');
+const speed = 50;
+
+counters.forEach(counter => {
+    const animate = () => {
+        const value = +counter.getAttribute('count');
+        const data = +counter.innerText;
+
+        const time = value / speed;
+        if (data < value) {
+            counter.innerText = Math.ceil(data + time);
+            setTimeout(animate, 1);
+        } else {
+            counter.innerText = value;
+        }
+
+    }
+
+    animate();
+});
