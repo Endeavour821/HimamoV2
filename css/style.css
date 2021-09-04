@@ -153,6 +153,58 @@ html {
         text-align: center;
         align-items: center;
     }
+
+    .work .img {
+        width: 19em !important;
+        height: 20em !important;
+    }
+
+    #division .owl-carousel .owl-next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -70%);
+        z-index: 1.5em;
+        font-size: 1.5em;
+    }
+
+    #division .owl-carousel .owl-prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -70%);
+        z-index: 1.5em;
+        font-size: 1.5em;
+        margin-left: 1.1em;
+    }
+
+    #leader .owl-carousel .owl-next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -70%);
+        z-index: 1.5em;
+        font-size: 1.5em;
+    }
+
+    #leader .owl-carousel .owl-prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -70%);
+        z-index: 1.5em;
+        font-size: 1.5em;
+        margin-left: 1.1em;
+    }
+
+    .owl-carousel .owl-nav {
+        visibility: hidden;
+    }
+
+    .owl-carousel:hover .owl-nav {
+        visibility: visible;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -212,6 +264,42 @@ html {
     .owl-one .block-10 h1,
     .owl-one .block-12 h1 {
         right: -23%;
+    }
+
+    #division .owl-carousel .owl-next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -70%);
+        z-index: 2.5em;
+        font-size: 2.5em;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    #division .owl-carousel .owl-prev {
+        visibility: hidden;
+    }
+
+    #leader .owl-carousel .owl-next {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -70%) rotate(180deg);
+        ;
+        z-index: 2.5em;
+        font-size: 2.5em;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    #leader .owl-carousel .owl-prev {
+        visibility: hidden;
+    }
+
+    #about .container .col-6 {
+        width: 25%;
     }
 }
 
@@ -280,7 +368,7 @@ html {
 /* ######################################## */
 
 .logoae {
-    width: 60%;
+    width: 65%;
 }
 
 .judul {
@@ -378,6 +466,7 @@ html {
     height: 14em;
     margin: 0px 50px 20px 0px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
 }
 
 
@@ -612,6 +701,7 @@ html {
     -ms-border-radius: 50%;
     border-radius: 50%;
 }
+
 .owl-dots {
     text-align: center;
 }
@@ -623,6 +713,7 @@ html {
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.1);
 }
+
 .owl-dots .owl-dot.active {
     background: #028784 !important;
 }
@@ -636,3 +727,21 @@ html {
 #header {
     transition: 1s;
 }
+
+.icon2 {
+    font-size: 2.5em;
+    color: #028784;
+}
+
+.value {
+    font-family: "Karla", Sans-serif;
+    font-weight: 700;
+}
+
+.karla {
+    line-height: 0.5em;
+    font-family: "Karla", Sans-serif;
+    font-weight: 600;
+}
+
+

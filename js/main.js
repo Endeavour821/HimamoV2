@@ -29,8 +29,8 @@ function scrollFunction() {
 $(document).ready(function () {
     $('.owl-one').owlCarousel({
         autoplay: true,
+        margin: 30, 
         loop: true,
-        margin: 30,
         nav: true,
         navText:["<i class='bx bxs-chevron-left-circle'></i>","<i class='bx bxs-chevron-right-circle'></i>"],
         autoplaySpeed: 2000,
@@ -45,7 +45,7 @@ $(document).ready(function () {
             600: {
                 items: 1,
                 center: true,   
-                stagePadding: 10,      
+                stagePadding: 10,                    
             },
             1000: {
                 items: 2,
@@ -81,6 +81,7 @@ $(document).ready(function () {
                 items: 2,
                 rtl: true,
                 stagePadding: 0,
+                margin: 30,
             }
         }
     });
@@ -116,7 +117,7 @@ function myFunction(x) {
 
 //counter up
 const counters = document.querySelectorAll('.value');
-const speed = 50;
+const speed = 1000;
 
 counters.forEach(counter => {
     const animate = () => {
