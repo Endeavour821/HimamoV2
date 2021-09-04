@@ -28,7 +28,6 @@ function scrollFunction() {
 
 $(document).ready(function () {
     $('.owl-one').owlCarousel({
-        stagePadding: 0,
         autoplay: true,
         loop: true,
         margin: 30,
@@ -39,23 +38,26 @@ $(document).ready(function () {
         responsiveClass:true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                center: true,
+                stagePadding: 10,
             },
             600: {
                 items: 1,
-                center: true,
-                
+                center: true,   
+                stagePadding: 10,      
             },
             1000: {
                 items: 2,
                 rtl : false,
+                stagePadding: 0,
             }
         }
     });
 
     $('.featured-carousel').owlCarousel({
         loop: true,
-        stagePadding: 0,
+        
         autoplay: true,
         autoplaySpeed: 2000,
         dots: false,
@@ -64,15 +66,21 @@ $(document).ready(function () {
         nav: true,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                center: true,  
+                stagePadding: 10, 
+                margin: 30,
+                
             },
             600: {
                 items: 1,
-                center: true,          
+                center: true,  
+                stagePadding: 5,        
             },
             1000: {
                 items: 2,
                 rtl: true,
+                stagePadding: 0,
             }
         }
     });
