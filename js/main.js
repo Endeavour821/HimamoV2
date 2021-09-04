@@ -32,7 +32,8 @@ $(document).ready(function () {
         autoplay: true,
         loop: true,
         margin: 30,
-        nav: false,
+        nav: true,
+        navText:["<i class='bx bxs-chevron-left-circle'></i>","<i class='bx bxs-chevron-right-circle'></i>"],
         autoplaySpeed: 2000,
         dots: false,
         responsiveClass:true,
@@ -43,6 +44,7 @@ $(document).ready(function () {
             600: {
                 items: 1,
                 center: true,
+                
             },
             1000: {
                 items: 2,
@@ -56,16 +58,17 @@ $(document).ready(function () {
         stagePadding: 0,
         autoplay: true,
         autoplaySpeed: 2000,
-        nav: false,
         dots: false,
         responsiveClass:true,
+        navText:["<i class='bx bxs-chevron-left-circle'></i>","<i class='bx bxs-chevron-right-circle'></i>"],
+        nav: true,
         responsive: {
             0: {
                 items: 1
             },
             600: {
                 items: 1,
-                center: true,
+                center: true,          
             },
             1000: {
                 items: 2,
