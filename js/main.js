@@ -30,42 +30,47 @@ $(document).ready(function () {
     $('.owl-one').owlCarousel({
         stagePadding: 0,
         autoplay: true,
-        loop: false,
+        loop: true,
         margin: 30,
         nav: false,
         autoplaySpeed: 2000,
         dots: false,
+        responsiveClass:true,
         responsive: {
             0: {
                 items: 1
             },
             600: {
-                items: 1
+                items: 1,
+                center: true,
             },
             1000: {
-                items: 2
+                items: 2,
+                rtl : false,
             }
         }
     });
 
     $('.featured-carousel').owlCarousel({
         loop: true,
-        stagePadding: -50,
+        stagePadding: 0,
         autoplay: true,
         autoplaySpeed: 2000,
         nav: false,
         dots: false,
-        rtl: true,
-        autoplayHoverPause: false,
+        responsiveClass:true,
         responsive: {
             0: {
                 items: 1
             },
             600: {
-                items: 2
+                items: 1,
+                center: true,
+                margin: 30,
             },
             1000: {
-                items: 2
+                items: 2,
+                rtl: true,
             }
         }
     });
@@ -85,7 +90,7 @@ $(document).ready(function () {
                 items: 1
             },
             600: {
-                items: 2
+                items: 1
             },
             1000: {
                 items: 3

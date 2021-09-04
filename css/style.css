@@ -139,6 +139,20 @@ html {
     .teks {
         padding-top: 2em !important;
     }
+
+    .owl-one {
+        position: relative !important;
+        right: 0 !important;
+        left: 0 !important;
+    }
+
+    .featured-carousel {
+        position: relative !important;
+        right: 0 !important;
+        left: 0 !important;
+        text-align: center;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -442,7 +456,7 @@ html {
 /* ########################################### */
 .work {
     width: 100%;
-    max-height: 11em;
+    max-height: 25em;
 }
 
 .work .img {
@@ -510,6 +524,7 @@ html {
     background-repeat: no-repeat;
     background-position: center center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
 }
 
 /* ######################################### */
