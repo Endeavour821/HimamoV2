@@ -66,7 +66,6 @@ $(document).ready(function () {
             600: {
                 items: 1,
                 center: true,
-                margin: 30,
             },
             1000: {
                 items: 2,
