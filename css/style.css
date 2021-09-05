@@ -819,9 +819,12 @@ html {
 }
 
 .credit {
-    background-color: #005c5a;
-    height: 4rem;
+    background: #005c5a;
+    width: 100%;
+    min-height: 4rem;
     line-height: 2rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .credit span i {
