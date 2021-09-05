@@ -29,13 +29,13 @@ function scrollFunction() {
 $(document).ready(function () {
     $('.owl-one').owlCarousel({
         autoplay: true,
-        margin: 30, 
+        margin: 30,
         loop: true,
         nav: true,
-        navText:["<i class='bx bxs-chevron-left-circle'></i>","<i class='bx bxs-chevron-right-circle'></i>"],
+        navText: ["<i class='bx bxs-chevron-left-circle'></i>", "<i class='bx bxs-chevron-right-circle'></i>"],
         autoplaySpeed: 2000,
         dots: false,
-        responsiveClass:true,
+        responsiveClass: true,
         responsive: {
             0: {
                 items: 1,
@@ -44,12 +44,12 @@ $(document).ready(function () {
             },
             600: {
                 items: 1,
-                center: true,   
-                stagePadding: 10,                    
+                center: true,
+                stagePadding: 10,
             },
             1000: {
                 items: 2,
-                rtl : false,
+                rtl: false,
                 stagePadding: 0,
             }
         }
@@ -57,25 +57,25 @@ $(document).ready(function () {
 
     $('.featured-carousel').owlCarousel({
         loop: true,
-        
+
         autoplay: true,
         autoplaySpeed: 2000,
         dots: false,
-        responsiveClass:true,
-        navText:["<i class='bx bxs-chevron-left-circle'></i>","<i class='bx bxs-chevron-right-circle'></i>"],
+        responsiveClass: true,
+        navText: ["<i class='bx bxs-chevron-left-circle'></i>", "<i class='bx bxs-chevron-right-circle'></i>"],
         nav: true,
         responsive: {
             0: {
                 items: 1,
-                center: true,  
-                stagePadding: 10, 
+                center: true,
+                stagePadding: 10,
                 margin: 30,
-                
+
             },
             600: {
                 items: 1,
-                center: true,  
-                stagePadding: 5,        
+                center: true,
+                stagePadding: 5,
             },
             1000: {
                 items: 2,
