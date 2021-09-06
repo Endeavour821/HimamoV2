@@ -140,7 +140,6 @@ html {
 }
 
 /* ------------Breakpoints (responsive)---------------------*/
-
 /* small devices */
 @media (max-width: 1200px) {
 
@@ -239,11 +238,6 @@ html {
         font-size: 3.5em;
     }
 
-    .px-5 {
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
-    }
-
     .testimony-wrap .user-img {
         width: 4.5em;
         height: 4.5em;
@@ -259,6 +253,10 @@ html {
 
     .errpage .row {
         text-align: center !important;
+    }
+
+    .err404 {
+        padding: 3rem 0 3rem 0;
     }
 }
 
