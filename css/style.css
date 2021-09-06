@@ -1,8 +1,9 @@
-/* #################################################### */
+/* ------------smooth scrolling---------------------*/
 html {
     scroll-behavior: smooth;
 }
 
+/* ------------switch dark mode---------------------*/
 /* The switch */
 .switch {
     position: relative;
@@ -29,10 +30,7 @@ html {
     ;
 }
 
-/* #################################################### */
-
-/* carousel */
-
+/* ------------bootstrap carousel---------------------*/
 .carousel {
     padding-top: 0 !important;
     margin-top: -3em !important;
@@ -82,7 +80,7 @@ html {
     visibility: visible;
 }
 
-/* ############################################################## */
+/* ------------Typography---------------------*/
 .quote {
     font-family: "Spectral", serif;
     font-weight: 700;
@@ -129,8 +127,22 @@ html {
     transform: rotate(-4deg);
 }
 
+.slider-text h1 span {
+    color: #b7472a;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: 0px;
+}
 
-@media (max-width: 768px) {
+.slider-text2 h1 span {
+    color: #b7472a;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke-width: 0px;
+}
+
+/* ------------Breakpoints (responsive)---------------------*/
+
+/* small devices */
+@media (max-width: 1200px) {
 
     .owl-one h1 {
         position: fixed !important;
@@ -217,19 +229,41 @@ html {
         height: 100%;
     }
 
-    .slider-text h1 {
-        font-size: 3em;
-    }
-
     .slider-text2 p {
         font-family: 'Karla', sans-serif;
         font-weight: 500;
         font-size: 0.8em;
     }
 
+    .slider-text h1 {
+        font-size: 3.5em;
+    }
+
+    .px-5 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .testimony-wrap .user-img {
+        width: 4.5em;
+        height: 4.5em;
+    }
+
+    .errtitle {
+        font-size: 25vw !important;
+    }
+
+    .errtext {
+        font-size: 1.1em;
+    }
+
+    .errpage .row {
+        text-align: center !important;
+    }
 }
 
-@media screen and (min-width: 768px) {
+/* medium up devices */
+@media screen and (min-width: 1200px) {
     .slider-text h1 {
         font-size: 80px;
         color: #fff;
@@ -330,69 +364,13 @@ html {
     }
 }
 
-/* ############################################## */
 
-.slider-text h1 span {
-    color: #b7472a;
-    -webkit-text-fill-color: #fff;
-    -webkit-text-stroke-width: 0px;
-}
-
-.slider-text2 h1 span {
-    color: #b7472a;
-    -webkit-text-fill-color: #fff;
-    -webkit-text-stroke-width: 0px;
-}
-
-
-/* ################## */
+/* -----------------------Section about-------------------------- */
 .about {
     /* background: #b7472a; */
     align-items: center;
     text-align: center;
 }
-
-
-.about .intro {
-    z-index: 0;
-    position: relative;
-}
-
-.intro {
-    width: 100%;
-    background: #b7472a;
-    padding: 30px;
-}
-
-.intro.color-1 {
-    background: #ab4227;
-}
-
-.intro.color-2 {
-    background: #a23f25;
-}
-
-.intro .icon {
-    margin-right: 20px;
-}
-
-.intro .icon span {
-    font-size: 60px;
-    color: #fff;
-}
-
-.intro .text {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.intro .text h2 {
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-/* ######################################## */
 
 .logoae {
     width: 65%;
@@ -401,6 +379,8 @@ html {
 .judul {
     color: var(--first-color);
 }
+
+/* ----------------parallax(History and Apa Kata Mereka)--------------- */
 
 .parallax {
     /* The image used */
@@ -432,6 +412,7 @@ html {
     background-size: cover;
 }
 
+/* ----------------------fix when scrolling--------------------- */
 #about {
     padding-top: 3rem;
     margin-top: -3rem;
@@ -453,9 +434,7 @@ html {
 }
 
 
-
-/* ######################################### */
-/*scroll up*/
+/*----------------------scroll up--------------------------*/
 #myBtn {
     background-color: #028784;
     height: 50px;
@@ -481,7 +460,9 @@ html {
     justify-content: center;
 }
 
-/* ################################################## */
+/* -------------------------owl-carousel----------------------------- */
+
+/* division */
 .owl-one {
     overflow: hidden;
     height: auto;
@@ -570,7 +551,7 @@ html {
     height: auto;
 }
 
-/* ########################################### */
+/* leader */
 .work {
     width: 100%;
     max-height: 25em;
@@ -644,7 +625,7 @@ html {
     border-radius: 8px;
 }
 
-/* ######################################### */
+/* Apa Kata Mereka */
 .user-img {
     background-size: cover;
     background-repeat: no-repeat;
@@ -746,7 +727,8 @@ html {
     background: #028784 !important;
 }
 
-/* ############################################# */
+
+/* ---------------------transition for smooth changing---------------- */
 
 .bg-light,
 .bg-white,
@@ -755,6 +737,9 @@ html {
 #header {
     transition: 1s;
 }
+
+
+/* ----------------------footer----------------------------- */
 
 .icon2 {
     font-size: 2.5em;
@@ -828,7 +813,7 @@ html {
 }
 
 .footericon {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .credit {
@@ -853,7 +838,6 @@ html {
     transition: 1s;
 }
 
-/* ############################################################## */
 /* ----------------------------------------------
  * Generated by Animista on 2021-9-5 13:35:3
  * Licensed under FreeBSD License.
@@ -944,6 +928,7 @@ html {
     }
 }
 
+/* ------------------------preloader-------------------------------- */
 
 .heartbeat {
     -webkit-animation: heartbeat 1.5s ease-out infinite both;
@@ -965,8 +950,8 @@ html {
     justify-content: center;
 }
 
-/* ################################################################ */
-/*scroll down */
+
+/*------------------------scroll down--------------------------*/
 .scroll-down {
     background-color: #22222700;
     height: 50px;
@@ -1027,4 +1012,54 @@ html {
         top: 90%;
         opacity: 0;
     }
+}
+
+.col-icon {
+    width: 10%;
+}
+
+.col-tulisan {
+    width: 90%;
+}
+
+/* --------------------error page-------------------- */
+.err404 {
+    width: 95%;
+    height: auto;
+}
+
+.errpage {
+    width: 100%;
+    height: 100vh;
+    margin-top: -3rem;
+}
+
+.errpage .row {
+    padding-top: 20vh;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.errtitle {
+    font-family: 'karla', sans-serif;
+    font-weight: 800;
+    font-size: 10em;
+}
+
+.errtext {
+    font-family: 'spectral', serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.btn-primary {
+    font-weight: 600 !important;
+    font-family: 'karla', sans-serif;
+    background: #028784 !important;
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background: #005c5a !important;
+    border: 1px solid transparent;
 }
