@@ -41,6 +41,7 @@ $(document).ready(function () {
                 items: 1,
                 center: true,
                 stagePadding: 10,
+                singleItem:true,
             },
             600: {
                 items: 1,
@@ -70,6 +71,7 @@ $(document).ready(function () {
                 center: true,
                 stagePadding: 10,
                 margin: 30,
+                singleItem:true,
 
             },
             600: {

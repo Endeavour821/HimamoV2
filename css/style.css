@@ -140,6 +140,13 @@ html {
 }
 
 /* ------------Breakpoints (responsive)---------------------*/
+@media (max-width: 320px) {
+    .px-5 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
 /* small devices */
 @media (max-width: 1200px) {
 
@@ -257,6 +264,16 @@ html {
 
     .err404 {
         padding: 3rem 0 3rem 0;
+    }
+
+    .errpage .row {
+        padding-top: 15vh !important;
+    }
+
+    #about .px-5,
+    #history .px-5 {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
     }
 }
 
@@ -938,7 +955,6 @@ html {
 #loading {
     top: 0;
     left: 0;
-    background: #fff;
     position: fixed;
     z-index: 9999999;
     width: 100vw;
