@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- title page -->
+    <title>HIMAMO | Himpunan Mahasiswa Otomasi Manufaktur & Mekatronika</title>
+    <!-- bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/segitiga.png">
+    <!-- css gue -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <!-- icon from boxicon -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+    <!-- font spectral-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- font karla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <!-- owlcarousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- custom css -->
+    <style>
+        :root {
+            --header-height: 3rem;
+            --nav-width: 68px;
+            --first-color: #028784;
+            --first-color-light: #b2d8d8;
+            --white-color: #f7f6fb00;
+            --body-font: 'Karla', sans-serif;
+            --normal-font-size: 1rem;
+            --z-fixed: 100
+        }
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box
+        }
+
+        body {
+            position: relative;
+            margin: var(--header-height) 0 0 0;
+            padding: 0 0rem;
+            font-family: var(--body-font);
+            font-size: var(--normal-font-size);
+            transition: .5s;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Spectral", serif;
+        }
+
+        p {
+            font-family: "Karla", sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            height: var(--header-height);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+            z-index: var(--z-fixed);
+            transition: .5s
+        }
+
+        .header_toggle {
+            color: var(--first-color);
+            font-size: 1.5rem;
+            cursor: pointer
+        }
+
+        .header_img {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            overflow: hidden
+        }
+
+        .header_img img {
+            width: 30px
+        }
+
+        .l-navbar {
+            position: fixed;
+            top: 0;
+            left: -30%;
+            width: var(--nav-width);
+            height: 100vh;
+            background-color: var(--first-color);
+            padding: .5rem 1rem 0 0;
+            transition: .5s;
+            z-index: var(--z-fixed);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .nav {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden
+        }
+
+        .nav_logo,
+        .nav_link {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+            column-gap: 1rem;
+            padding: .5rem 0 .5rem 1.5rem
+        }
+
+        .img_logo {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+            column-gap: 1rem;
+            /* T L B R  */
+            padding: .5rem 0 1.5rem 1.25rem;
+        }
+
+        .nav_logo {
+            margin-bottom: 2rem
+        }
+
+        .nav_logo-icon {
+            font-size: 1.25rem;
+            color: #fff;
+        }
+
+        .nav_logo-name {
+            color: #fff;
+            font-weight: 700
+        }
+
+        .nav_link {
+            position: relative;
+            color: var(--first-color-light);
+            margin-bottom: 1.5rem;
+            transition: .3s
+        }
+
+        .nav_link:hover {
+            color: #fff;
+        }
+
+        .nav_icon {
+            font-size: 1.25rem
+        }
+
+        .show {
+            left: 0
+        }
+
+        .body-pd {
+            padding-left: calc(var(--nav-width) + 0rem)
+        }
+
+        .header-pd {
+            padding-left: calc(var(--nav-width) + 1.25rem)
+        }
+
+        .active {
+            color: #fff;
+        }
+
+        .nav_list .active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 2px;
+            height: 32px;
+            background-color: #fff;
+        }
+
+        .height-100 {
+            height: 100vh
+        }
+
+        .width-100 {
+            width: 100vw;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                margin: calc(var(--header-height) + 0rem) 0 0 0;
+                padding-left: calc(var(--nav-width) + 0rem)
+            }
+
+            .header {
+                height: calc(var(--header-height) + 1rem);
+                padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
+            }
+
+            .header_img {
+                width: 30px;
+                height: 30px
+            }
+
+            .header_img img {
+                width: 30px
+            }
+
+            .l-navbar {
+                left: 0;
+                padding: 1rem 1rem 0 0
+            }
+
+            .show {
+                width: calc(var(--nav-width) + 150px)
+            }
+
+            .body-pd {
+                padding-left: calc(var(--nav-width) + 150px)
+            }
+
+            .header-pd {
+                padding-left: calc(var(--nav-width) + 170px)
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <body onload="load()" id="body-pd">
+        <div class="bg-light" id="loading">
+            <img class="heartbeat" src="img/load.png">
+        </div>
+        <header class="header" id="header">
+            <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+            <div class="row">
+                <div class="col text-center">
+                    <a class="">
+                        <span class="buttondark">
+                            <label class="switch" for="darkSwitch">
+                                <input type="checkbox" id="darkSwitch">
+                                <!-- <span class="slider round"></span> -->
+                                <div class="darktogel">
+                                    <i onclick="myFunction(this)" class='bx bxs-moon nav_icon'></i>
+                                    <script src="js/dark-mode-switch.min.js"></script>
+                                </div>
+                            </label>
+                        </span>
+                    </a>
+                </div>
+                <div class="col text-center">
+                    <div class="header_img"> <img src="img/pp.jpg" alt=""> </div>
+                </div>
+            </div>
+        </header>
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div> <a href="#" class="img_logo">
+                        <img src="img/logo_01.png">
+                        <span class="nav_logo-name">
+                            <img src="img/logo_02.png">
+                        </span> </a>
+                    <div class="nav_list">
+                        <a href="#" class="nav_link active"> <i class='bx bx-home nav_icon'></i></i>
+                            <span class="nav_name">Home</span></a>
+                        <a href="#about" class="nav_link"> <i class='bx bx-info-circle nav_icon'></i></i>
+                            <span class="nav_name">About</span> </a>
+                        <a href="#history" class="nav_link">
+                            <i class='bx bx-time nav_icon'></i></i> <span class="nav_name">History</span></a>
+                        <a href="#division" class="nav_link"><i class='bx bxs-network-chart nav_icon'></i></i> <span
+                                class="nav_name">Division</span> </a>
+                        <a href="#leader" class="nav_link"> <i class='bx bxs-user-account nav_icon'></i><span
+                                class="nav_name">Leadership</span> </a>
+                        <a href="./404.html" class="nav_link"> <i class='bx bx-rss nav_icon'></i></i> <span
+                                class="nav_name">Blog</span> </a>
+                        <!-- <a href="http://ae.polman-bandung.ac.id/" class="nav_link"> <i class='bx bxs-school'></i><span
+                                class="nav_name">Website AE</span> </a> -->
+                        <a href="./contact-form.html" class="nav_link"> <i
+                                class='bx bxs-phone nav_icon'></i>Contact</span> </a>
+
+                    </div>
+                </div> <a href="#" class="nav_link"> <i class='bx bx-log-in nav_icon'></i> <span
+                        class="nav_name">Login</span> </a>
+            </nav>
+        </div>
+
+        <!--BUTON TO UP-->
+        <a onclick="topFunction()">
+            <div id="myBtn" class="scroll-up text-center butonUP">
+                <span>
+                    <i class='text-white pt-2 bx bx-up-arrow-alt'></i>
+                </span>
+            </div>
+        </a>
+
+        <!--Container Main start-->
+        <div class="wrap bg-light">
+
+            <section id="home">
+                <!-- <div class="parallax"> -->
+                <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item drk active">
+                            <img src="img/1.jpg" class="d-block gbr img-fluid" alt="...">
+                            <div class="carousel-caption">
+                                <div class="row no-gutters slider-text2 align-items-center justify-content-center">
+                                    <h1 class="quote">WELCOME TO <span>HIMAMO</span></h1>
+                                    <p class="quote">HIMPUNAN MAHASISWA OTOMASI MANUFAKTUR & MEKATRONIKA. </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item drk">
+                            <img src="img/3.jpg" class="d-block gbr img-fluid " alt="...">
+                            <div class="carousel-caption">
+                                <div class="row no-gutters slider-text align-items-center justify-content-center">
+                                    <h1 class="quote">Still <span>The Highest</span></h1>
+                                    <h1 class="quote">Still <span> The Best </span></h1>
+                                    <!-- <h1 class="quote"><span>AE </span>AE!</h1> -->
+                                </div>
+                            </div>
+                        </div>
+                        <button class="cntrl carousel-control-prev" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <i class='bx bxs-chevron-left-circle carouselbtn'></i>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="cntrl carousel-control-next" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <i class='bx bxs-chevron-right-circle carouselbtn'></i>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- </div> -->
+
+                    <!-- scrolldown -->
+                    <a class="text-center" href="#about">
+                        <div class="scroll-down"></div>
+                    </a>
+
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <div class="container pb-3">
+                    <div class="container pb-2 px-5 pt-5">
+                        <div class="row">
+                            <div class="col-md text-md-start">
+                                <img class="logoae pt-3" src="img/logoae.png">
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="text-dark quote text-md-end pt-3">Apa itu <span class="judul">Jurusan
+                                        Teknik Otomasi
+                                        Manufaktur dan Mekatronika?</span></h2>
+                                <p class="text-dark pt-2 text-md-end">
+                                    AE Memiliki kompetensi inti pada perancangan dan pembuatan teknologi terpadu
+                                    dalam
+                                    mekatronik
+                                    dan
+                                    otomasi manufaktur. Mekatronika adalah perpaduan dari teknik listrik, informasi,
+                                    mekanik dan
+                                    sistem kendali yang merupakan kompetensi dalam pembuatan alat atau komponen
+                                    digunakan untuk
+                                    membangun sistem otomatis. Sementara Otomasi Manufaktur menangani keterbatasan
+                                    manusia
+                                    dengan
+                                    sifat kerja yang berulang-ulang yang dihasilkan dari integrasi aplikasi dan
+                                    beberapa
+                                    perangkat
+                                    elektronik. Menyediakan layanan dalam sistem kendali otomasi yang berkualitas
+                                    dan
+                                    handal
+                                    bagi
+                                    industri manufaktur, elektronika, agro, pertambangan, tekstil, pengolahan
+                                    makanan
+                                    dan
+                                    minuman,
+                                    dan peralatan elektronik rumah sakit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container px-5">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h2 class="text-dark quote text-md-start pt-5">Apa itu <span class="judul">Himpunan
+                                        Otomasi Manufaktur
+                                        dan Mekatronika?</span></h2>
+                                <p class="text-dark pt-2 text-md-start">
+
+                                    Himpunan mahasiswa jurusan (disingkat HMJ) adalah organisasi mahasiswa di
+                                    tingkat
+                                    jurusan di suatu perguruan tinggi. Keberadaan himpunan mahasiswa jurusan
+                                    haruslah
+                                    berdasarkan prinsip dari, oleh dan untuk mahasiswa. Himpunan mahasiswa jurusan
+                                    merupakan media bagi anggotanya untuk mengembangkan pola pikir dan kepribadian
+                                    yang
+                                    berkaitan dengan disiplin ilmunya agar siap terjun ke masyarakat.</p>
+
+                            </div>
+                            <div class="col-md pb-5 text-md-end">
+                                <img class="logoae pt-5" src="img/segitiga.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container pb-5">
+                        <div class="row">
+                            <div class="col-6 pt-5 text-center">
+                                <i class='icon2 bx bxs-contact'></i>
+                                <h2 class="value" count="218"></h2>
+                                <h5 class="karla">Anggota</h5>
+                            </div>
+                            <div class="col-6 pt-5 text-center">
+                                <i class='icon2 bx bxs-bank'></i>
+                                <h2 class="value" count="25"></h2>
+                                <h5 class="karla">Angkatan</h5>
+                            </div>
+                            <div class="col-6 pt-5 text-center">
+                                <i class='icon2 bx bxs-trophy'></i>
+                                <h2 class="value" count="2"></h2>
+                                <h5 class="karla">Kejuaran</h5>
+                            </div>
+                            <div class="col-6 pt-5 text-center">
+                                <i class='icon2 bx bxs-flag'></i>
+                                <h2 class="value" count="1"></h2>
+                                <h5 class="karla">Bendera</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section id="history" class="about">
+                <div class="parallax">
+                    <div class="container pt-4 pb-5 px-5">
+                        <div class="row">
+                            <div class="col pt-4">
+                                <div class="row no-gutters slider-text text-md-start">
+                                    <!-- <div class="row">
+                                        <div class="col-md">
+                                            <h1 class="value quote" count="14">0</h1>
+                                        </div>
+                                        <div class="col-md">
+                                            <h1 class="bulan quote"><span>November</span></h1>
+                                        </div>
+                                    </div>
+                                    <h1 class="value quote" count="1995">0</h1> -->
+                                    <h1 class="quote">14 <span>November</span> <span>19</span>95</h1>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="text-white quote text-md-end pt-5">Sejarah <span class="judul">HIMAMO</span>
+                                </h2>
+                                <p class="text-white pt-2 text-md-end">
+                                    HIMAMO didirikan di Bandung pada tanggal 14 November 1995.
+                                    HIMAMO merupakan himpunan pertama yang didirikan di kampus Politeknik Manufaktur
+                                    Negeri Bandung. Sejak Awal didirikannya himpunan ini, sudah berazaskan dan
+                                    berlandaskan Pancasila dan kebenaran ilmiah tentang himpunan. HIMAMO sendiri
+                                    merupakan himpunan yang bersifat kekeluargaan, independen dan professional.</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section id="division">
+                <div class="container pt-5 pb-5 px-5">
+                    <div class="row">
+                        <div class="col pt-5 text-center">
+                            <h2 class="text-dark quote text-md-start">Divisi <span class="judul">HIMAMO</span>
+                            </h2>
+                            <p class="text-dark text-md-start">
+                                Divisi Himamo dibagi menjadi 12 divisi.
+                                yaitu sebagai berikut :</p>
+                        </div>
+                        <div class="pt-3 col-md-10">
+                            <div class="owl-carousel owl-one owl-theme">
+                                <div class="block block-1">
+                                    <h1 class="text-dark">Kominfo.</h1>
+                                </div>
+                                <div class="block block-2">
+                                    <h1 class="text-dark">Kaderisasi.</h1>
+                                </div>
+                                <div class="block block-3">
+                                    <h1 class="text-dark">Kreativitas.</h1>
+                                </div>
+                                <div class="block block-4">
+                                    <h1 class="text-dark">Kekeluargaan.</h1>
+                                </div>
+                                <div class="block block-5">
+                                    <h1 class="text-dark">Biro Kesekretariatan.</h1>
+                                </div>
+                                <div class="block block-6">
+                                    <h1 class="text-dark">RnD.</h1>
+                                </div>
+                                <div class="block block-7">
+                                    <h1 class="text-dark">Kewirausahaan.</h1>
+                                </div>
+                                <div class="block block-8">
+                                    <h1 class="text-dark">Legislatif.</h1>
+                                </div>
+                                <div class="block block-9">
+                                    <h1 class="text-dark">Hubungan Luar.</h1>
+                                </div>
+                                <div class="block block-10">
+                                    <h1 class="text-dark">Sosma.</h1>
+                                </div>
+                                <div class="block block-11">
+                                    <h1 class="text-dark">Biro Keuangan.</h1>
+                                </div>
+                                <div class="block block-12">
+                                    <h1 class="text-dark">Biro Operasional.</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="leader">
+                <div class="container pt-4 pb-5 px-5">
+                    <div class="row">
+                        <div class="col-md-8 text-md-start">
+                            <div class="featured-carousel owl-carousel">
+                                <div class="item">
+                                    <div class="work pb-4">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Adnan Maulana</a></h3>
+                                                <span>Masa jabatan : 2012 s/d 2013</span>
+                                                <span>NIM : 210345003</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader2.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Dimas Nugraha</a></h3>
+                                                <span>Masa jabatan : 2013 s/d 2014</span>
+                                                <span>NIM : 211341007</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader3.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Mohamed Iqbal</a></h3>
+                                                <span>Masa jabatan : 2014 s/d 2015</span>
+                                                <span>NIM : 212341042</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Jefri Maulana</a></h3>
+                                                <span>Masa jabatan : 2015 s/d 2016</span>
+                                                <span>NIM : 210345003</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader5.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Saptianhadi</a></h3>
+                                                <span>Masa jabatan : 2016 s/d 2017</span>
+                                                <span>NIM : 214341047</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <div class="work pb-4">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader6.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Eko Rahayu Tali jiwa</a></h3>
+                                                <span>Masa jabatan : 2017 s/d 2018</span>
+                                                <span>NIM : 215341004</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader7.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Sulthan M . F</a></h3>
+                                                <span>Masa jabatan : 2018 s/d 2019</span>
+                                                <span>NIM : 216341069</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader8.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Riyadh Tsaniyadi D</a></h3>
+                                                <span>Masa jabatan : 2019 s/d 2020</span>
+                                                <span>NIM : 217341068</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader9.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Sendi Dika Prasenda</a></h3>
+                                                <span>Masa jabatan : 2020 s/d 2021</span>
+                                                <span>NIM : 218441046</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="work">
+                                        <div class="img d-flex align-items-end justify-content-center"
+                                            style="background-image: url(./img/leader10.jpg);">
+                                            <div class="text w-100">
+                                                <span class="cat">KETUA HIMPUNAN</span>
+                                                <h3><a href="#">Hery Ardiyanto</a></h3>
+                                                <span>Masa jabatan : 2020 s/d 2021</span>
+                                                <span>NIM : 219441010</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teks col pt-5 text-center">
+                            <h2 class="text-dark quote text-md-end">Sejarah Kepemimpinan <span
+                                    class="judul">HIMAMO</span>
+                            </h2>
+                            <p class="text-dark text-md-end">
+                                Sejarah Kepemimpinan Ketua Himpunan Mahasiswa Jurusan Teknik Otomasi Manufaktur dan
+                                Mekatronika.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="prestation" class="about">
+                <div class="parallax2">
+                    <div class="container pt-5 pb-5 px-5">
+                        <div class="row justify-content-center mb-4">
+                            <div class="col-md-7 text-center">
+                                <h1 class="mb-3 text-white quote">Apa Kata <span class="judul">Mereka?</span></h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel-testimony owl-theme owl-carousel">
+                                    <div class="item">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class='bx bxs-quote-right'></i>
+                                        </div>
+                                        <div class="testimony-wrap py-4">
+                                            <div class="text">
+                                                <p class="mb-4">Thank you HIMAMO for teaching me friendship, unity,
+                                                    community, kindness, youth, optimism, and understanding.</p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="user-img" style="background-image: url(./img/pp.jpg)">
+                                                    </div>
+                                                    <div class="ps-3">
+                                                        <p class="name">Hirzi Nurfakhrian</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap py-4">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <i class='bx bxs-quote-right'></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="mb-4">It's better to burn out, than to fade away.
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                </p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="user-img" style="background-image: url(./img/pp.jpg)">
+                                                    </div>
+                                                    <div class="ps-3">
+                                                        <p class="name">Mochammad Aulia</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap py-4">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <i class='bx bxs-quote-right'></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="mb-4">"We began as wanderers, and we are wanderers still. So
+                                                    keep your mind curious."
+                                                    <br>
+                                                    <br>
+                                                </p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="user-img" style="background-image: url(./img/pp.jpg)">
+                                                    </div>
+                                                    <div class="ps-3">
+                                                        <p class="name">Muhammad Fikri</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap py-4">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <i class='bx bxs-quote-right'></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="mb-4">Berubah untuk lebih baik.
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                </p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="user-img" style="background-image: url(./img/cwk.jpg)">
+                                                    </div>
+                                                    <div class="ps-3">
+                                                        <p class="name">Fitriani Pratiwi</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap py-4">
+                                            <div class="icon d-flex align-items-center justify-content-center">
+                                                <i class='bx bxs-quote-right'></i>
+                                            </div>
+                                            <div class="text">
+                                                <p class="mb-4">Teruslah berkembang, teruslah berproses, teruslah
+                                                    menjadi lebih baik, laksanakan continous improvement.
+                                                </p>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="user-img" style="background-image: url(./img/pp.jpg)">
+                                                    </div>
+                                                    <div class="ps-3">
+                                                        <p class="name">Eko Rahayu Tali Jiwa</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="video">
+                <div class="container pt-5 pb-5 px-5">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-7 text-center">
+                            <h1 class="mb-3 text-dark quote">Our <span class="judul">Moments</span></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="text-center embed-responsive">
+                            <iframe class="pideo" src="https://www.youtube.com/embed/3MlI-7cVGos"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container px-5">
+                    <div class="row">
+                        <div class="col-md pt-5 text-md-start">
+                            <img src="img/logo.png">
+                            <p class="text-white pt-3">HIMAMO merupakan himpunan pertama yang didirikan di kampus
+                                Politeknik Manufaktur Negeri Bandung.
+                            </p>
+                            <ul class="footer-social list-unstyled pt-1">
+                                <li class="">
+                                    <a class="ig" target="_blank" href="https://www.instagram.com/himamo_polman/"><i
+                                            class='text-white bx bxl-instagram'></i></a></li>
+                                <li class=""><a class="yt" target="_blank"
+                                        href="https://www.youtube.com/channel/UC0ZEfY5moa9gWIIksG3aflw"><i
+                                            class='text-white bx bxl-youtube'></i></i></a></li>
+                                <li class=""><a class="email" target="_blank" href="mailto:Officialhimamo@gmail.com"><i
+                                            class='text-white bx bxs-envelope'></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md pt-5 text-md-start">
+                            <h4 class="text-white quote">Helpful Links</h4>
+                            <ul class="list-unstyled pt-1 text-white">
+                                <li class="">
+                                    <div class="row">
+                                        <div class="col-icon">
+                                            <i class='pe-3 footericon bx bx-globe'></i>
+                                        </div>
+                                        <div class="col-tulisan">
+                                            <a target="_blank" href="http://ae.polman-bandung.ac.id/"
+                                                class="ps-2 text-white d-inline-block">
+                                                Website Jurusan AE
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="row pt-2">
+                                        <div class="col-icon">
+                                            <i class='pe-3 footericon bx bx-globe'></i>
+                                        </div>
+                                        <div class="col-tulisan">
+                                            <a target="_blank" href="https://polman-bandung.ac.id/"
+                                                class="ps-2 text-white d-inline-block">
+                                                Website POLMAN
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="row pt-2">
+                                        <div class="col-icon">
+                                            <i class='pe-3 footericon bx bx-sitemap'></i>
+                                        </div>
+                                        <div class="col-tulisan">
+                                            <a target="_blank"
+                                                href="https://himamo.org/assets/images/organigram/himamo-24.jpg"
+                                                class="ps-2 text-white d-inline-block">
+                                                Organigram Himamo
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md pt-5 text-md-start">
+                            <h4 class="text-white quote">Have a Question ?</h4>
+                            <ul class="list-unstyled pt-1 text-white">
+                                <li class="">
+                                    <div class="row">
+                                        <div class="col-icon">
+                                            <i class='pe-3 footericon bx bxs-map-alt'></i>
+                                        </div>
+                                        <div class="col-tulisan">
+                                            <p class="ps-2">
+                                                Jl.Kanayakan No 21,Dago,Bandung
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="row">
+                                        <div class="col-icon">
+                                            <i class='pe-3 footericon bx bxs-envelope'></i>
+                                        </div>
+                                        <div class="col-tulisan">
+                                            <p class="ps-2">
+                                                Officialhimamo@gmail.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="row">
+                                        <div class="col-icon">
+                                            <i class='pe-3 footericon bx bx-globe'></i>
+                                        </div>
+                                        <div class="col-tulisan">
+                                            <p class="ps-2">
+                                                Himamo.org
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="credit py-2">
+                    <div class="container pt-3 px-5">
+                        <p class="">Copyright ©2021 All rights reserved | Made With <span><i
+                                    class='bx bxs-heart'></i></span> By <span class="text-white">KOMINFO Division</span>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!--Container Main end-->
+        <!--jquery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- js gue -->
+        <script type='text/javascript' src='js/main.js'></script>
+        <!--owlcarousel-->
+        <script type='text/javascript' src='js/owl.carousel.min.js'></script>
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+        <script type='text/javascript'>
+            document.addEventListener("DOMContentLoaded", function (event) {
+
+                const showNavbar = (toggleId, navId, bodyId, headerId) => {
+                    const toggle = document.getElementById(toggleId),
+                        nav = document.getElementById(navId),
+                        bodypd = document.getElementById(bodyId),
+                        headerpd = document.getElementById(headerId)
+
+                    // Validate that all variables exist
+                    if (toggle && nav && bodypd && headerpd) {
+                        toggle.addEventListener('click', () => {
+                            // show navbar
+                            nav.classList.toggle('show')
+                            // change icon
+                            toggle.classList.toggle('bx-x')
+                            // add padding to body
+                            bodypd.classList.toggle('body-pd')
+                            // add padding to header
+                            headerpd.classList.toggle('header-pd')
+                        })
+                    }
+                }
+
+                showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+                /*===== LINK ACTIVE =====*/
+                const linkColor = document.querySelectorAll('.nav_link')
+
+                function colorLink() {
+                    if (linkColor) {
+                        linkColor.forEach(l => l.classList.remove('active'))
+                        this.classList.add('active')
+                    }
+                }
+                linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+                // Your code to run since DOM is loaded and ready
+            });
+        </script>
+        <script>
+            var preloader = document.getElementById("loading");
+
+            function load() {
+                preloader.style.display = 'none';
+            }
+        </script>
+    </body>
+
+</html>
