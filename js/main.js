@@ -33,7 +33,7 @@ $(document).ready(function () {
         loop: true,
         nav: true,
         navText: ["<i class='bx bxs-chevron-left-circle'></i>", "<i class='bx bxs-chevron-right-circle'></i>"],
-        autoplaySpeed: 2000,
+        autoplaySpeed: 1000,
         dots: false,
         responsiveClass: true,
         responsive: {
@@ -60,7 +60,7 @@ $(document).ready(function () {
         loop: true,
 
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
         dots: false,
         responsiveClass: true,
         navText: ["<i class='bx bxs-chevron-left-circle'></i>", "<i class='bx bxs-chevron-right-circle'></i>"],

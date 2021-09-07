@@ -45,6 +45,20 @@ html {
     transition: 1s;
 }
 
+/* 
+---------------Overlay----------------------- */
+.hitam {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0.8;
+}
+
 .drk:after {
     content: "";
     display: block;
@@ -275,6 +289,25 @@ html {
         padding-left: 2rem !important;
         padding-right: 2rem !important;
     }
+
+    #map {
+        height: 15em !important;
+        width: 100%;
+        border-radius: 8px 8px 0 0 !important;
+    }
+
+    .px-5 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .formisi {
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem !important;
+    }
+
+    .formisi h2 {
+        font-size: 2rem !important;
+    }
 }
 
 /* medium up devices */
@@ -426,6 +459,23 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.parallax3 {
+    /* The image used */
+    background-image: url(../img/paralak2.jpg);
+    margin-top: -3rem;
+
+
+    /* Set a specific height */
+    min-height: auto;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /* ----------------------fix when scrolling--------------------- */
 #about {
@@ -848,6 +898,10 @@ html {
     color: rgb(199, 199, 199);
 }
 
+.footer .col-tulisan a:hover {
+    color: #005c5a !important;
+}
+
 .owl-carousel .owl-nav:hover {
     color: #028784;
     transition: 1s;
@@ -1076,4 +1130,119 @@ html {
 .btn-primary:hover {
     background: #005c5a !important;
     border: 1px solid transparent;
+}
+
+/* 
+----------------------contact form--------------------- */
+
+.contact-icon {
+    height: 6em;
+    width: 6em;
+    background: #028784;
+    border-radius: 50%;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.contact-icon i {
+    font-size: 2em;
+}
+
+#contact-form .text span {
+    font-family: 'spectral', serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#contact-form .text a {
+    color: #028784;
+}
+
+#contact-form .text a:hover {
+    color: #005c5a;
+}
+
+#map {
+    height: 35em;
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+}
+
+.mapinfo {
+    color: black;
+}
+
+.contactForm .label {
+    color: #028784 !important;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contactForm .form-control {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+}
+
+.contactForm .form-control {
+    height: 36px;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    border-radius: 2px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid #028784;
+}
+
+.contactForm .form-control::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.contactForm .form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.contactForm .form-control:-ms-input-placeholder {
+    /* IE 0+ */
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.contactForm .form-control:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.contactForm .form-control:focus,
+.contactForm .form-control:active {
+    border-color: #028784 !important;
+    background: transparent;
+}
+
+.contactForm textarea.form-control {
+    height: inherit !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 1px solid #028784;
+    -webkit-text-fill-color: #028784;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact-wrap {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 8px;
+    background: #ffffff;
 }

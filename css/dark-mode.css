@@ -33,3 +33,33 @@
   transition: 1s;
   background-color: rgba(255, 255, 255, 0.4);
 }
+
+[data-theme="dark"] .contactForm .form-control {
+  transition: 1s;
+  color: white;
+}
+
+[data-theme="dark"] .contact-wrap {
+  transition: 1s;
+  background: #434952;
+}
+
+[data-theme="dark"] .form-control::-webkit-input-placeholder {
+  transition: 1s;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] .form-control::-moz-placeholder {
+  transition: 1s;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] .form-control:-ms-input-placeholder {
+  transition: 1s;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme="dark"] .form-control:-moz-placeholder {
+  transition: 1s;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
