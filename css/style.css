@@ -41,7 +41,7 @@ html {
 }
 
 .carouselbtn:hover {
-    color: #028784;
+    color: #005c5a;
     transition: 1s;
 }
 
@@ -308,6 +308,19 @@ html {
     .formisi h2 {
         font-size: 2rem !important;
     }
+
+    .owl-one .block {
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .work .img {
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
 }
 
 /* medium up devices */
@@ -903,7 +916,7 @@ html {
 }
 
 .owl-carousel .owl-nav:hover {
-    color: #028784;
+    color: #005c5a;
     transition: 1s;
 }
 
@@ -1058,7 +1071,7 @@ html {
 }
 
 .scroll-down:hover {
-    background-color: #028784;
+    background-color: #005c5a;
 }
 
 /*animate function*/

@@ -387,28 +387,28 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="label" for="name">Full Name</label>
-                                                <input id="input-form" type="text" class="form-control" name="Name"
+                                                <input id="input-nama" type="text" class="form-control" name="Name"
                                                     id="name" placeholder="Name">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="label" for="email">Email Address</label>
-                                                <input id="input-form" type="email" class="form-control" name="Email"
+                                                <input id="input-mail" type="email" class="form-control" name="Email"
                                                     id="email" placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group pt-3">
                                                 <label class="label" for="subject">Subject</label>
-                                                <input id="input-form" type="text" class="form-control" name="Subject"
+                                                <input type="text" class="form-control" name="Subject"
                                                     id="subject" placeholder="Subject">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="form-group pt-3">
                                                 <label class="label" for="#">Message</label>
-                                                <textarea id="input-form" name="Message" class="form-control"
+                                                <textarea id="input-pesan" name="Message" class="form-control"
                                                     id="Message" cols="30" rows="6" placeholder="Message"></textarea>
                                             </div>
                                         </div>
@@ -657,9 +657,33 @@
         </script>
         <script>
             function empty() {
-                var x;
-                x = document.getElementById("input-form").value;
-                if (x == "") {
+                var nama;
+                var mail;
+                var pesan;
+                nama = document.getElementById("input-nama").value;
+                mail = document.getElementById("input-mail").value;
+                pesan = document.getElementById("input-pesan").value;
+                if (nama == "") {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please Fill The Form!',
+                        icon: 'error',
+                        confirmButtonText: 'Back',
+                        confirmButtonColor: '#028784'
+                    })
+                    return false;
+                };
+                if (mail == "") {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Please Fill The Form!',
+                        icon: 'error',
+                        confirmButtonText: 'Back',
+                        confirmButtonColor: '#028784'
+                    })
+                    return false;
+                };
+                if (pesan == "") {
                     Swal.fire({
                         title: 'Error!',
                         text: 'Please Fill The Form!',
