@@ -321,6 +321,10 @@ html {
         margin-right: auto !important;
     }
 
+    body {
+        overflow-x: hidden !important;
+    }
+
 }
 
 /* medium up devices */
