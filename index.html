@@ -35,223 +35,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- custom css -->
-    <style>
-        :root {
-            --header-height: 3rem;
-            --nav-width: 68px;
-            --first-color: #028784;
-            --first-color-light: #b2d8d8;
-            --white-color: #f7f6fb00;
-            --body-font: 'Karla', sans-serif;
-            --normal-font-size: 1rem;
-            --z-fixed: 100
-        }
-
-        *,
-        ::before,
-        ::after {
-            box-sizing: border-box
-        }
-
-        body {
-            position: relative;
-            margin: var(--header-height) 0 0 0;
-            padding: 0 0rem;
-            font-family: var(--body-font);
-            font-size: var(--normal-font-size);
-            transition: .5s;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: "Spectral", serif;
-        }
-
-        p {
-            font-family: "Karla", sans-serif;
-        }
-
-        .header {
-            width: 100%;
-            height: var(--header-height);
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 1rem;
-            z-index: var(--z-fixed);
-            transition: .5s
-        }
-
-        .header_toggle {
-            color: var(--first-color);
-            font-size: 1.5rem;
-            cursor: pointer
-        }
-
-        .header_img {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            border-radius: 50%;
-            overflow: hidden
-        }
-
-        .header_img img {
-            width: 30px
-        }
-
-        .l-navbar {
-            position: fixed;
-            top: 0;
-            left: -30%;
-            width: var(--nav-width);
-            height: 100vh;
-            background-color: var(--first-color);
-            padding: .5rem 1rem 0 0;
-            transition: .5s;
-            z-index: var(--z-fixed);
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        }
-
-        .nav {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            overflow: hidden
-        }
-
-        .nav_logo,
-        .nav_link {
-            display: grid;
-            grid-template-columns: max-content max-content;
-            align-items: center;
-            column-gap: 1rem;
-            padding: .5rem 0 .5rem 1.5rem
-        }
-
-        .img_logo {
-            display: grid;
-            grid-template-columns: max-content max-content;
-            align-items: center;
-            column-gap: 1rem;
-            /* T L B R  */
-            padding: .5rem 0 1.5rem 1.25rem;
-        }
-
-        .nav_logo {
-            margin-bottom: 2rem
-        }
-
-        .nav_logo-icon {
-            font-size: 1.25rem;
-            color: #fff;
-        }
-
-        .nav_logo-name {
-            color: #fff;
-            font-weight: 700
-        }
-
-        .nav_link {
-            position: relative;
-            color: var(--first-color-light);
-            margin-bottom: 1.5rem;
-            transition: .3s
-        }
-
-        .nav_link:hover {
-            color: #fff;
-        }
-
-        .nav_icon {
-            font-size: 1.25rem
-        }
-
-        .show {
-            left: 0
-        }
-
-        .body-pd {
-            padding-left: calc(var(--nav-width) + 0rem)
-        }
-
-        .header-pd {
-            padding-left: calc(var(--nav-width) + 1.25rem)
-        }
-
-        .active {
-            color: #fff;
-        }
-
-        .nav_list .active::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            width: 2px;
-            height: 32px;
-            background-color: #fff;
-        }
-
-        .height-100 {
-            height: 100vh
-        }
-
-        .width-100 {
-            width: 100vw;
-        }
-
-        @media screen and (min-width: 768px) {
-            body {
-                margin: calc(var(--header-height) + 0rem) 0 0 0;
-                padding-left: calc(var(--nav-width) + 0rem)
-            }
-
-            .header {
-                height: calc(var(--header-height) + 1rem);
-                padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
-            }
-
-            .header_img {
-                width: 30px;
-                height: 30px
-            }
-
-            .header_img img {
-                width: 30px
-            }
-
-            .l-navbar {
-                left: 0;
-                padding: 1rem 1rem 0 0
-            }
-
-            .show {
-                width: calc(var(--nav-width) + 150px)
-            }
-
-            .body-pd {
-                padding-left: calc(var(--nav-width) + 150px)
-            }
-
-            .header-pd {
-                padding-left: calc(var(--nav-width) + 170px)
-            }
-        }
-    </style>
 
 </head>
 
@@ -269,17 +52,17 @@
                         <span class="buttondark">
                             <label class="switch" for="darkSwitch">
                                 <input type="checkbox" id="darkSwitch">
-                                <!-- <span class="slider round"></span> -->
                                 <div class="darktogel">
-                                    <i onclick="myFunction(this)" class='bx bxs-moon nav_icon'></i>
-                                    <script src="js/dark-mode-switch.min.js"></script>
+                                    <i class='btn-moon bxs-moon bx nav_icon'></i>
+                                    <i class='btn-sun bxs-sun d-none bx nav_icon'></i>
                                 </div>
                             </label>
                         </span>
                     </a>
                 </div>
                 <div class="col text-center">
-                    <div class="header_img"> <img src="img/pp.jpg" alt=""> </div>
+                    <i class='bx bxs-user-circle'></i>
+                    <!-- <div class="header_img"> <img src="img/pp.jpg" alt=""> </div> -->
                 </div>
             </div>
         </header>
@@ -314,6 +97,21 @@
             </nav>
         </div>
 
+        <div class="settings_account bg-light px-3 py-2 text-center d-none">
+            <ul classs="list-unstyled">
+                <li>
+                    <i class='text-dark bx bxs-user-circle'></i>
+                    <h2 class="text-dark">Guest</h2>
+                </li>
+                <li>
+                    <p class="text-dark">You Are Not Login Yet, Please Log-In</p>
+                </li>
+                <li>
+                    <button class="btn btn-primary">Login</button>
+                </li>
+            </ul>
+        </div>
+
         <!--BUTON TO UP-->
         <a onclick="topFunction()">
             <div id="myBtn" class="scroll-up text-center butonUP">
@@ -327,11 +125,10 @@
         <div class="wrap bg-light">
 
             <section id="home">
-                <!-- <div class="parallax"> -->
                 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item drk active">
-                            <img src="img/1.jpg" class="d-block gbr img-fluid" alt="...">
+                            <img src="img/1.jpg" class="d-block gbr img-fluid">
                             <div class="carousel-caption">
                                 <div class="row no-gutters slider-text2 align-items-center justify-content-center">
                                     <h1 class="quote">WELCOME TO <span>HIMAMO</span></h1>
@@ -341,12 +138,11 @@
                             </div>
                         </div>
                         <div class="carousel-item drk">
-                            <img src="img/3.jpg" class="d-block gbr img-fluid " alt="...">
+                            <img src="img/3.jpg" class="d-block gbr img-fluid ">
                             <div class="carousel-caption">
                                 <div class="row no-gutters slider-text align-items-center justify-content-center">
                                     <h1 class="quote">Still <span>The Highest</span></h1>
                                     <h1 class="quote">Still <span> The Best </span></h1>
-                                    <!-- <h1 class="quote"><span>AE </span>AE!</h1> -->
                                 </div>
                             </div>
                         </div>
@@ -361,8 +157,6 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <!-- </div> -->
-
                     <!-- scrolldown -->
                     <a class="text-center" href="#about">
                         <div class="scroll-down"></div>
@@ -373,7 +167,7 @@
 
             <section id="about" class="about">
                 <div class="container pb-3">
-                    <div class="container pb-2 px-5 pt-5">
+                    <div class="container pb-5 px-5 pt-5">
                         <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000"
                             data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
                             data-aos-anchor-placement="top-center" class="row">
@@ -475,15 +269,6 @@
                                 data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
                                 data-aos-anchor-placement="top-center" class="col pt-4">
                                 <div class="row no-gutters slider-text text-md-start">
-                                    <!-- <div class="row">
-                                        <div class="col-md">
-                                            <h1 class="value quote" count="14">0</h1>
-                                        </div>
-                                        <div class="col-md">
-                                            <h1 class="bulan quote"><span>November</span></h1>
-                                        </div>
-                                    </div>
-                                    <h1 class="value quote" count="1995">0</h1> -->
                                     <h1 class="quote">14 <span>November</span> <span>19</span>95</h1>
                                 </div>
                             </div>
@@ -504,7 +289,7 @@
             </section>
             <section id="division">
                 <div class="container pt-5 pb-5 px-5">
-                    <div data-aos="fade-up" data-aos-offset="-300" data-aos-duration="1000"
+                    <div data-aos="fade-up" data-aos-offset="-100" data-aos-duration="1000"
                         data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
                         data-aos-anchor-placement="top-center" class="row">
                         <div class="col pt-5 text-center">
@@ -559,9 +344,8 @@
             </section>
             <section id="leader">
                 <div class="container pt-4 pb-5 px-5">
-                    <div data-aos="fade-up" data-aos-offset="-300" data-aos-duration="1000"
-                        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-                        data-aos-anchor-placement="top-center" class="row">
+                    <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                        data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center" class="row">
                         <div class="col-md-8 text-md-start">
                             <div class="featured-carousel owl-carousel">
                                 <div class="item">
@@ -689,7 +473,7 @@
                                             <div class="text w-100">
                                                 <span class="cat">KETUA HIMPUNAN</span>
                                                 <h3><a href="#">Hery Ardiyanto</a></h3>
-                                                <span>Masa jabatan : 2020 s/d 2021</span>
+                                                <span>Masa jabatan : 2021 s/d 2022</span>
                                                 <span>NIM : 219441010</span>
                                             </div>
                                         </div>
@@ -719,8 +503,8 @@
                             </div>
                         </div>
                         <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000"
-                        data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-                        data-aos-anchor-placement="top-center" class="row">
+                            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+                            data-aos-anchor-placement="top-center" class="row">
                             <div class="col-md-12">
                                 <div class="carousel-testimony owl-theme owl-carousel">
                                     <div class="item">
@@ -831,19 +615,20 @@
             </section>
             <section id="video">
                 <div class="container pt-5 pb-5 px-5">
-                    <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000"
-                    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-                    data-aos-anchor-placement="top-center" class="row justify-content-center mb-4">
+                    <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" data-aos-easing="ease-in-out"
+                        data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center"
+                        class="row justify-content-center mb-4">
                         <div class="col-md-7 text-center">
                             <h1 class="mb-3 text-dark quote">Our <span class="judul">Moments</span></h1>
                         </div>
                     </div>
                     <div class="row">
                         <div class="text-center embed-responsive">
-                            <iframe data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000"
-                            data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
-                            data-aos-anchor-placement="top-center" class="pideo" src="https://www.youtube.com/embed/3MlI-7cVGos"
-                                title="YouTube video player" frameborder="0"
+                            <iframe data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000"
+                                data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
+                                data-aos-anchor-placement="top-center" class="pideo"
+                                src="https://www.youtube.com/embed/3MlI-7cVGos" title="YouTube video player"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -960,7 +745,7 @@
                 </div>
                 <div class="credit py-2">
                     <div class="container pt-3 px-5">
-                        <p class="">Copyright ©2021 All rights reserved | Made With <span><i
+                        <p class="">Copyright ©2017 - 2021 All rights reserved | Made With <span><i
                                     class='bx bxs-heart'></i></span> By <span class="text-white">KOMINFO Division</span>
                         </p>
                     </div>
@@ -974,6 +759,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- js gue -->
         <script type='text/javascript' src='js/main.js'></script>
+        <script src="js/dark-mode-switch.min.js"></script>
         <!--owlcarousel-->
         <script type='text/javascript' src='js/owl.carousel.min.js'></script>
         <!-- bootstrap -->
@@ -983,57 +769,12 @@
         <!-- animateonscroll -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
             integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script type='text/javascript'>
-            document.addEventListener("DOMContentLoaded", function (event) {
-
-                const showNavbar = (toggleId, navId, bodyId, headerId) => {
-                    const toggle = document.getElementById(toggleId),
-                        nav = document.getElementById(navId),
-                        bodypd = document.getElementById(bodyId),
-                        headerpd = document.getElementById(headerId)
-
-                    // Validate that all variables exist
-                    if (toggle && nav && bodypd && headerpd) {
-                        toggle.addEventListener('click', () => {
-                            // show navbar
-                            nav.classList.toggle('show')
-                            // change icon
-                            toggle.classList.toggle('bx-x')
-                            // add padding to body
-                            bodypd.classList.toggle('body-pd')
-                            // add padding to header
-                            headerpd.classList.toggle('header-pd')
-                        })
-                    }
-                }
-
-                showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
-
-                /*===== LINK ACTIVE =====*/
-                const linkColor = document.querySelectorAll('.nav_link')
-
-                function colorLink() {
-                    if (linkColor) {
-                        linkColor.forEach(l => l.classList.remove('active'))
-                        this.classList.add('active')
-                    }
-                }
-                linkColor.forEach(l => l.addEventListener('click', colorLink))
-
-                // Your code to run since DOM is loaded and ready
-            });
-        </script>
-        <script>
-            var preloader = document.getElementById("loading");
-
-            function load() {
-                preloader.style.display = 'none';
-            }
+            crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
         <script>
             AOS.init();
         </script>
+
     </body>
 
 </html>

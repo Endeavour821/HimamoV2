@@ -1,32 +1,69 @@
+// ++++++++++++++++++++++++++++++++++++++++++SIDEBAR++++++++++++++++++++++++++++++++++++++++++++
+document.addEventListener("DOMContentLoaded", function (event) {
+
+    const showNavbar = (toggleId, navId, bodyId, headerId) => {
+        const toggle = document.getElementById(toggleId),
+            nav = document.getElementById(navId),
+            bodypd = document.getElementById(bodyId),
+            headerpd = document.getElementById(headerId)
+
+        // Validate that all variables exist
+        if (toggle && nav && bodypd && headerpd) {
+            toggle.addEventListener('click', () => {
+                // show navbar
+                nav.classList.toggle('show')
+                // change icon
+                toggle.classList.toggle('bx-x')
+                // add padding to body
+                bodypd.classList.toggle('body-pd')
+                // add padding to header
+                headerpd.classList.toggle('header-pd')
+            })
+        }
+    }
+
+    showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+    /*===== LINK ACTIVE =====*/
+    const linkColor = document.querySelectorAll('.nav_link')
+
+    function colorLink() {
+        if (linkColor) {
+            linkColor.forEach(l => l.classList.remove('active'))
+            this.classList.add('active')
+        }
+    }
+    linkColor.forEach(l => l.addEventListener('click', colorLink))
+});
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//ambil icon sidebar 
+var nav_home = document.querySelector('.nav_list a:nth-child(1)');
+var nav_about = document.querySelector('.nav_list a:nth-child(2)');
+var nav_history = document.querySelector('.nav_list a:nth-child(3)');
+var nav_divisi = document.querySelector('.nav_list a:nth-child(4)');
+var nav_leader = document.querySelector('.nav_list a:nth-child(5)');
+
+//ambil height dari setiaps section
+var home_value = (document.querySelector('section#home .carousel').clientHeight) - 100;
+var about_value = document.querySelector('section#about .container').clientHeight;
+var history_value = document.querySelector('section#history .container').clientHeight;
+var division_value = document.querySelector('section#division .container').clientHeight;
+var leader_value = document.querySelector('section#leader .container').clientHeight;
+
+// ++++++++++++++++++++++++++++++++++++++++++tombol to up++++++++++++++++++++++++++++++++++++++++++++
 //Get the button:
 mybutton = document.getElementById("myBtn");
-
-window.onscroll = function () {
-    scrollFunction()
-};
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-//saat scroll ganti bg header 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-        if (document.body.getAttribute("data-theme", "dark")) {
-            document.getElementById("header").style.background = "#393e46";
-        } else {
-            document.getElementById("header").style.background = "#f8f9fa";
-        }
-    } else {
-        mybutton.style.display = "none";
-        document.getElementById("header").style.background = "none";
-    }
-}
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 $(document).ready(function () {
+    // ++++++++++++++++++++++++++++++++++++++++++owl-carousel+++++++++++++++++++++++++++++++++++++++++++
     $('.owl-one').owlCarousel({
         autoplay: true,
         margin: 30,
@@ -41,7 +78,7 @@ $(document).ready(function () {
                 items: 1,
                 center: true,
                 stagePadding: 10,
-                singleItem:true,
+                singleItem: true,
             },
             600: {
                 items: 1,
@@ -71,7 +108,7 @@ $(document).ready(function () {
                 center: true,
                 stagePadding: 10,
                 margin: 30,
-                singleItem:true,
+                singleItem: true,
 
             },
             600: {
@@ -110,14 +147,73 @@ $(document).ready(function () {
             }
         }
     });
+    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // ++++++++++++++++++++++++++++++++++++++++++saat scroll lakukan++++++++++++++++++++++++++++++++++++++++++++
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 20) {
+            mybutton.style.display = "block";
+            document.getElementById("header").classList.add('bg-light');
+        } else {
+            mybutton.style.display = "none";
+            document.getElementById("header").classList.remove('bg-light');
+            nav_home.classList.add("active");
+            nav_about.classList.remove("active");
+            nav_history.classList.remove("active");
+        }
+
+        if (scroll > home_value && scroll < (home_value + about_value)) {
+            nav_about.classList.add('active');
+            nav_home.classList.remove('active');
+            nav_history.classList.remove('active');
+            nav_divisi.classList.remove('active');
+            nav_leader.classList.remove('active');
+        } else if (scroll > (home_value + about_value) &&
+            scroll < (home_value + about_value + history_value)) {
+            nav_history.classList.add('active');
+            nav_about.classList.remove('active');
+            nav_home.classList.remove('active');
+            nav_divisi.classList.remove('active');
+            nav_leader.classList.remove('active');
+        } else if (scroll > (home_value + about_value + history_value) &&
+            scroll < (home_value + about_value + history_value + division_value)) {
+            nav_history.classList.remove('active');
+            nav_about.classList.remove('active');
+            nav_home.classList.remove('active');
+            nav_divisi.classList.add('active');
+            nav_leader.classList.remove('active');
+        } else if (scroll > (home_value + about_value + history_value + division_value) &&
+            scroll < (home_value + about_value + history_value + division_value + leader_value)) {
+            nav_history.classList.remove('active');
+            nav_about.classList.remove('active');
+            nav_home.classList.remove('active');
+            nav_divisi.classList.remove('active');
+            nav_leader.classList.add('active');
+        } else if (scroll > (home_value + about_value + history_value + division_value + leader_value)) {
+            nav_history.classList.remove('active');
+            nav_about.classList.remove('active');
+            nav_home.classList.remove('active');
+            nav_divisi.classList.remove('active');
+            nav_leader.classList.remove('active');
+        }
+    })
 });
 
-// toggledark       
-function myFunction(x) {
-    x.classList.toggle("bxs-sun");
-}
+// ++++++++++++++++++++++++++++++++++++++++++tombolnya 2 mode++++++++++++++++++++++++++++++++++++++++++++
 
-//counter up
+var moon = document.querySelector('.btn-moon');
+var sun = document.querySelector('.btn-sun');
+
+document.getElementById("darkSwitch").addEventListener("click", function () {
+    moon.classList.toggle('d-none');
+    sun.classList.toggle('d-none');
+});
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// ++++++++++++++++++++++++++++++++++++++++++counter up function++++++++++++++++++++++++++++++++++++++++++++
+
 const counters = document.querySelectorAll('.value');
 const speed = 1000;
 
@@ -138,3 +234,20 @@ counters.forEach(counter => {
 
     animate();
 });
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// ++++++++++++++++++++++++++++++++++++++++++preloader++++++++++++++++++++++++++++++++++++++++++++
+var preloader = document.getElementById("loading");
+
+function load() {
+    preloader.style.display = 'none';
+}
+
+// account settings 
+
+var user_button = document.querySelector('.bxs-user-circle');
+var settings_account = document.querySelector('.settings_account');
+
+user_button.addEventListener("click", function () {
+    settings_account.classList.toggle('d-none');
+})

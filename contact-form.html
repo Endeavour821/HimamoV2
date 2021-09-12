@@ -260,17 +260,17 @@
                         <span class="buttondark">
                             <label class="switch" for="darkSwitch">
                                 <input type="checkbox" id="darkSwitch">
-                                <!-- <span class="slider round"></span> -->
                                 <div class="darktogel">
-                                    <i onclick="myFunction(this)" class='bx bxs-moon nav_icon'></i>
-                                    <script src="js/dark-mode-switch.min.js"></script>
+                                    <i class='btn-moon bxs-moon bx nav_icon'></i>
+                                    <i class='btn-sun bxs-sun d-none bx nav_icon'></i>
                                 </div>
                             </label>
                         </span>
                     </a>
                 </div>
                 <div class="col text-center">
-                    <div class="header_img"> <img src="img/pp.jpg" alt=""> </div>
+                    <i class='bx bxs-user-circle'></i>
+                    <!-- <div class="header_img"> <img src="img/pp.jpg" alt=""> </div> -->
                 </div>
             </div>
         </header>
@@ -303,6 +303,23 @@
                 </div> <a href="#" class="nav_link"> <i class='bx bx-log-in nav_icon'></i> <span
                         class="nav_name">Login</span> </a>
             </nav>
+        </div>
+
+
+<!-- account settings -->
+        <div class="settings_account bg-light px-3 py-2 text-center d-none">
+            <ul classs="list-unstyled">
+                <li>
+                    <i class='text-dark bx bxs-user-circle'></i>
+                    <h2 class="text-dark">Guest</h2>
+                </li>
+                <li>
+                    <p class="text-dark">You Are Not Login Yet, Please Log-In</p>
+                </li>
+                <li>
+                    <button class="btn btn-primary">Login</button>
+                </li>
+            </ul>
         </div>
 
         <!--BUTON TO UP-->
@@ -381,7 +398,7 @@
                         </div>
                         <div class="col-md-6 formisi">
                             <div class="w-100 p-md-5">
-                                <h2 class="quote mb-4">Contact <span class="judul"> Us </span></h2>
+                                <h2 class="quote text-dark mb-4">Contact <span class="judul"> Us </span></h2>
                                 <form name="submit-to-google-sheet" class="contactForm">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -401,8 +418,8 @@
                                         <div class="col-md-12">
                                             <div class="form-group pt-3">
                                                 <label class="label" for="subject">Subject</label>
-                                                <input type="text" class="form-control" name="Subject"
-                                                    id="subject" placeholder="Subject">
+                                                <input type="text" class="form-control" name="Subject" id="subject"
+                                                    placeholder="Subject">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -541,7 +558,7 @@
                 </div>
                 <div class="credit py-2">
                     <div class="container pt-3 px-5">
-                        <p class="">Copyright ©2021 All rights reserved | Made With <span><i
+                        <p class="">Copyright ©2017 - 2021 All rights reserved | Made With <span><i
                                     class='bx bxs-heart'></i></span> By <span class="text-white">KOMINFO Division</span>
                         </p>
                     </div>
@@ -549,6 +566,7 @@
             </footer>
         </div>
         <!--Container Main end-->
+        <script src="js/dark-mode-switch.min.js"></script>
         <!--jquery-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
             integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
@@ -599,45 +617,32 @@
                     }
                 }
                 linkColor.forEach(l => l.addEventListener('click', colorLink))
-
-                // Your code to run since DOM is loaded and ready
             });
         </script>
         <script>
             //Get the button:
             mybutton = document.getElementById("myBtn");
-
-            window.onscroll = function () {
-                scrollFunction()
-            };
-
             // When the user clicks on the button, scroll to the top of the document
+
             function topFunction() {
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
 
-            //saat scroll ganti bg header 
-            function scrollFunction() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //scroll function saat scroll lakukan...
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 20) {
                     mybutton.style.display = "block";
-                    if (document.body.getAttribute("data-theme", "dark")) {
-                        document.getElementById("header").style.background = "#393e46";
-                    } else {
-                        document.getElementById("header").style.background = "#f8f9fa";
-                    }
+                    document.getElementById("header").classList.add('bg-light');
                 } else {
                     mybutton.style.display = "none";
-                    document.getElementById("header").style.background = "none";
+                    document.getElementById("header").classList.remove('bg-light');
                 }
-            }
-
-            // toggledark       
-            function myFunction(x) {
-                x.classList.toggle("bxs-sun");
-            }
+            })
         </script>
         <script type="text/javascript">
+            //google maps function
             var map;
             $(document).ready(function () {
                 map = new GMaps({
@@ -656,6 +661,7 @@
             });
         </script>
         <script>
+            //form to google sheets
             function empty() {
                 var nama;
                 var mail;
@@ -696,6 +702,7 @@
             }
         </script>
         <script>
+            //tombol form
             const scriptURL =
                 'https://script.google.com/macros/s/AKfycbxuHY2OfEhNZKWNCGxA_0ZjRCPIPTZ8FE2TQO__ZLiKq9zbEIX1wFpdorazjow42ew/exec'
             const form = document.forms['submit-to-google-sheet']
@@ -734,6 +741,27 @@
                     })
             })
         </script>
+        <script>
+            //switch 2 mode
+            var moon = document.querySelector('.btn-moon');
+            var sun = document.querySelector('.btn-sun');
+
+            document.getElementById("darkSwitch").addEventListener("click", function () {
+                moon.classList.toggle('d-none');
+                sun.classList.toggle('d-none');
+            });
+        </script>
+        <script>
+            // account settings 
+
+            var user_button = document.querySelector('.bxs-user-circle');
+            var settings_account = document.querySelector('.settings_account');
+
+            user_button.addEventListener("click", function () {
+                settings_account.classList.toggle('d-none');
+            })
+        </script>
+
     </body>
 
 </html>

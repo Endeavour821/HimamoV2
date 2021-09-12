@@ -53,7 +53,7 @@
             font-family: var(--body-font);
             font-size: var(--normal-font-size);
             transition: .5s;
-            overflow-x: hidden;
+            overflow: hidden !important;
         }
 
         a {
@@ -261,17 +261,17 @@
                         <span class="buttondark">
                             <label class="switch" for="darkSwitch">
                                 <input type="checkbox" id="darkSwitch">
-                                <!-- <span class="slider round"></span> -->
                                 <div class="darktogel">
-                                    <i onclick="myFunction(this)" class='bx bxs-moon nav_icon'></i>
-                                    <script src="js/dark-mode-switch.min.js"></script>
+                                    <i class='btn-moon bxs-moon bx nav_icon'></i>
+                                    <i class='btn-sun bxs-sun d-none bx nav_icon'></i>
                                 </div>
                             </label>
                         </span>
                     </a>
                 </div>
                 <div class="col text-center">
-                    <div class="header_img"> <img src="img/pp.jpg" alt=""> </div>
+                    <i class='bx bxs-user-circle'></i>
+                    <!-- <div class="header_img"> <img src="img/pp.jpg" alt=""> </div> -->
                 </div>
             </div>
         </header>
@@ -298,12 +298,28 @@
                                 class="nav_name">Blog</span> </a>
                         <!-- <a href="http://ae.polman-bandung.ac.id/" class="nav_link"> <i class='bx bxs-school'></i><span
                                 class="nav_name">Website AE</span> </a> -->
-                        <a href="./contact-form.html" class="nav_link"> <i class='bx bxs-phone nav_icon'></i>Contact</span> </a>
+                        <a href="./contact-form.html" class="nav_link"> <i
+                                class='bx bxs-phone nav_icon'></i>Contact</span> </a>
 
                     </div>
                 </div> <a href="#" class="nav_link"> <i class='bx bx-log-in nav_icon'></i> <span
                         class="nav_name">Login</span> </a>
             </nav>
+        </div>
+
+        <div class="settings_account bg-light px-3 py-2 text-center d-none">
+            <ul classs="list-unstyled">
+                <li>
+                    <i class='text-dark bx bxs-user-circle'></i>
+                    <h2 class="text-dark">Guest</h2>
+                </li>
+                <li>
+                    <p class="text-dark">You Are Not Login Yet, Please Log-In</p>
+                </li>
+                <li>
+                    <button class="btn btn-primary">Login</button>
+                </li>
+            </ul>
         </div>
         <!--Container Main start-->
         <div class="bg-light">
@@ -311,7 +327,8 @@
                 <div class="row">
                     <div class="col-md pt-md-5">
                         <h1 class="errtitle">404</h1>
-                        <h5 class="pb-4 errtext">Looks like this page is missing. Dont worry though, our best man is on the
+                        <h5 class="pb-4 errtext">Looks like this page is missing. Dont worry though, our best man is on
+                            the
                             case.</h5>
                         <a href="./index.html#">
                             <button type="button" class=" btn-md btn btn-primary">BACK TO HOME</button>
@@ -324,6 +341,7 @@
             </div>
         </div>
         <!--Container Main end-->
+        <script src="js/dark-mode-switch.min.js"></script>
         <!-- bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
@@ -376,10 +394,23 @@
             }
         </script>
         <script>
-            // toggledark       
-            function myFunction(x) {
-                x.classList.toggle("bxs-sun");
-            }
+            var moon = document.querySelector('.btn-moon');
+            var sun = document.querySelector('.btn-sun');
+
+            document.getElementById("darkSwitch").addEventListener("click", function () {
+                moon.classList.toggle('d-none');
+                sun.classList.toggle('d-none');
+            });
+        </script>
+        <script>
+            // account settings 
+
+            var user_button = document.querySelector('.bxs-user-circle');
+            var settings_account = document.querySelector('.settings_account');
+
+            user_button.addEventListener("click", function () {
+                settings_account.classList.toggle('d-none');
+            })
         </script>
     </body>
 
