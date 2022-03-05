@@ -251,3 +251,55 @@ var settings_account = document.querySelector('.settings_account');
 user_button.addEventListener("click", function () {
     settings_account.classList.toggle('d-none');
 })
+
+///////////////////////////////////GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".cont-1 .logoae", {
+    scrollTrigger: {
+        trigger: ".cont-1 .logoae",
+        scrub: true,
+        start: "top bottom",
+        end: "top top"
+    },
+    x: -100,
+    duration: 5,
+    opacity: 0,
+    ease: "power4.inOut"
+});
+
+gsap.from(".cont-1 .col-md-7", {
+    scrollTrigger: {
+        trigger: ".cont-1 .col-md-7",
+        scrub: true,
+        start: "top bottom",
+        end: "top top"
+    },
+    x: 100,
+    duration: 5,
+    opacity: 0,
+    ease: "power4.inOut"
+});
+
+// const tl = gsap.timeline({
+
+//     scrollTrigger: {
+//         trigger: ".cont-2",
+//         start: "top bottom",
+//         end: "top top",
+//         scrub: true,
+//     }
+
+// });
+
+// tl.from('.cont-1 .logoae, .cont-1 .col-md-7', {
+//     opacity: 0,
+//     x: -100,
+//     duration: 1
+// });
+
+// tl.from('.cont-2', {
+//     opacity: 0,
+//     x: 100,
+//     duration: 1
+// });
