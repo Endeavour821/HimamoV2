@@ -211,6 +211,24 @@ p {
     .header-pd {
         padding-left: calc(var(--nav-width) + 170px)
     }
+
+    .gs_reveal {
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0s;
+    }
+
+    .gs_reveal_fromLeft {
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0s;
+    }
+
+    .gs_reveal_fromRight {
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0s;
+    }
 }
 
 /* ------------smooth scrolling---------------------*/
@@ -1581,4 +1599,10 @@ select:-webkit-autofill:focus {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 8px;
     background: #ffffff;
+}
+
+.gs_reveal {
+    opacity: 1;
+    visibility: visible;
+    transition: transform 0s;
 }

@@ -34,6 +34,64 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
     linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+    //gsap
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    var wideScreen = window.matchMedia("(min-width: 800px)");
+    var narrowScreen = window.matchMedia("(max-width: 799px)");
+
+    gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
+
+        if (wideScreen.matches) {
+            hide(elem); // assure that the element is hidden when scrolled into view above 800px screen-width
+        } else {
+            unhide(elem); // assures that the element is visible when scrolled into view below 800px screen-width
+        }
+
+
+        ScrollTrigger.matchMedia({
+            // desktop
+            "(min-width: 800px)": function () {
+                // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
+                // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
+
+                ScrollTrigger.create({
+                    trigger: elem,
+                    onEnter: function () {
+                        animateFrom(elem)
+                    },
+                    onEnterBack: function () {
+                        animateFrom(elem, -1)
+                    },
+                    onLeave: function () {
+                        hide(elem)
+                    } // assure that the element is hidden when scrolled into view
+                });
+
+            },
+
+            // mobile
+            "(max-width: 799px)": function () {
+                // The ScrollTriggers created inside these functions are segregated and get
+                // reverted/killed when the media query doesn't match anymore. 
+
+                ScrollTrigger.saveStyles(".gs_reveal_fromLeft, .gs_reveal_fromRight, .gs_reveal");
+
+                // return function() {
+                //   gsap.kill(); 
+                //   other cleanup code can go here. 
+                // };
+            },
+
+            // all 
+            "all": function () {
+                // ScrollTriggers created here aren't associated with a particular media query,
+                // so they persist.
+            }
+        });
+    });
 });
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -65,7 +123,7 @@ function topFunction() {
 $(document).ready(function () {
     // ++++++++++++++++++++++++++++++++++++++++++owl-carousel+++++++++++++++++++++++++++++++++++++++++++
     $('.owl-one').owlCarousel({
-        autoplay: true,
+        autoplay: false,
         margin: 30,
         loop: true,
         nav: true,
@@ -96,7 +154,7 @@ $(document).ready(function () {
     $('.featured-carousel').owlCarousel({
         loop: true,
 
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         dots: false,
         responsiveClass: true,
@@ -128,7 +186,7 @@ $(document).ready(function () {
     $('.carousel-testimony').owlCarousel({
         center: true,
         loop: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 2000,
         items: 1,
         margin: 30,
@@ -252,54 +310,40 @@ user_button.addEventListener("click", function () {
     settings_account.classList.toggle('d-none');
 })
 
-///////////////////////////////////GSAP
-gsap.registerPlugin(ScrollTrigger);
+function animateFrom(elem, direction) {
+    direction = direction | 1;
 
-gsap.from(".cont-1 .logoae", {
-    scrollTrigger: {
-        trigger: ".cont-1 .logoae",
-        scrub: true,
-        start: "top bottom",
-        end: "top top"
-    },
-    x: -100,
-    duration: 5,
-    opacity: 0,
-    ease: "power4.inOut"
-});
+    var x = 0,
+        y = direction * 100;
+    if (elem.classList.contains("gs_reveal_fromLeft")) {
+        x = -100;
+        y = 0;
+    } else if (elem.classList.contains("gs_reveal_fromRight")) {
+        x = 100;
+        y = 0;
+    }
+    gsap.fromTo(elem, {
+        x: x,
+        y: y,
+        autoAlpha: 0
+    }, {
+        duration: 1.5,
+        x: 0,
+        y: 0,
+        autoAlpha: 1,
+        ease: "expo",
+        overwrite: "auto"
+    });
+}
 
-gsap.from(".cont-1 .col-md-7", {
-    scrollTrigger: {
-        trigger: ".cont-1 .col-md-7",
-        scrub: true,
-        start: "top bottom",
-        end: "top top"
-    },
-    x: 100,
-    duration: 5,
-    opacity: 0,
-    ease: "power4.inOut"
-});
+function hide(elem) {
+    gsap.set(elem, {
+        autoAlpha: 0
+    });
+}
 
-// const tl = gsap.timeline({
-
-//     scrollTrigger: {
-//         trigger: ".cont-2",
-//         start: "top bottom",
-//         end: "top top",
-//         scrub: true,
-//     }
-
-// });
-
-// tl.from('.cont-1 .logoae, .cont-1 .col-md-7', {
-//     opacity: 0,
-//     x: -100,
-//     duration: 1
-// });
-
-// tl.from('.cont-2', {
-//     opacity: 0,
-//     x: 100,
-//     duration: 1
-// });
+function unhide(elem) {
+    gsap.set(elem, {
+        autoAlpha: 1
+    });
+}
