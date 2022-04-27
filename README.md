@@ -29,5 +29,5 @@ fitur fitur yang saat ini ingin dikembangkan oleh HIMAMO :
 2. Contact Form (masih konek sama email saya , tapi kalian bisa lihat keluhan atau pesan yang dimasukin di contact formnya kok disini, jangan edit apapun)
 - https://docs.google.com/spreadsheets/d/157GF1afs7TY2l05VXJS0XyaOE_TXiRojPtYEiDEMkuI/edit?usp=sharing
 
-### FEEL FREE TO PULL REQUEST , OR BUG REPORTING, HIMAMO HIMPUNANKU !
+### FEEL FREE TO ASK , REPORTING BUG AND PULL-REQUEST
 Endeavour821 - Kominfo 2020
