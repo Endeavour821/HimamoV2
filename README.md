@@ -1,6 +1,6 @@
 # HimamoV2
 
-Halo temen temen KOMINFO Sub-Departemen / Sub-Divisi Website , Github ini dibuat dari Sub-Divisi Website angkatan 2020 
+Halo temen temen KOMINFO Sub-Departemen / Sub-Divisi Website ,ataupun Siapapun yang mengunjungi github ini, Github ini dibuat dari Sub-Divisi Website angkatan 2020 
 Saya berinisiatif membuat github ini untuk mengupdate baik Front-End / Backend untuk website HIMAMO sebelum di deploy
 kalian bebas untuk pull request utk fixing bugs dll.
 
