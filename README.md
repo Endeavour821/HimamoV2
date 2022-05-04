@@ -4,12 +4,15 @@ Halo temen temen KOMINFO Sub-Departemen / Sub-Divisi Website ,ataupun Siapapun y
 Saya berinisiatif membuat github ini untuk mengupdate baik Front-End / Backend untuk website HIMAMO sebelum di deploy
 kalian bebas untuk pull request utk fixing bugs dll.
 
-## Masa Depan Website HIMAMO
+## Perubahan Website HIMAMO
 fitur fitur yang saat ini ingin dikembangkan oleh HIMAMO :
-1. pembuatan BACKEND akun anggota HIMAMO Sehingga dapat menyatukan fitur pilkahim dan keuangan internal
-2. perubahan besar besaran front end (DONE)
+1. pembuatan BACKEND akun anggota HIMAMO Sehingga dapat menyatukan fitur pilkahim dan keuangan internal (DONE PHP NATIVE)
+2. perubahan besar besaran front end (DONE BOOTSTRAP 5.03, JQUERY DLL)
 3. membuat blog aktif yang akan membagikan tutorial / selingan info tapi penting
 4. membuat pengarsipan TA dan PA agar dapat menjadi referensi bagi keluarga HIMAMO
+5. Admin selalu mengupdate database setiap tahun 
+6. admin selalu mengupdate resource paling tidak 1 tahun sekali untuk bootstrap , gsap , jquery dan resource lainnya yang diperoleh dari cdn / online
+7. admin harus paling tidak mengupgrade website 1 fitur ex : PHP NATIVE -----> LARAVEL / CODEIGNITER , JS NATIVE -------> VUE/REACT/ANGULAR agar website terus berkembang.
 
 ## PRE-REQUISITES
 1. HTML
@@ -19,8 +22,20 @@ fitur fitur yang saat ini ingin dikembangkan oleh HIMAMO :
 5. MYSQL
 6. Touch Of Design
 
+#CURRENT RESOURCE
+1.PHP NATIVE LOGIN
+2.BOOTSTRAP 5.03
+3.SWEETALERT2
+4.GSAP
+5.OWLCAROUSEL
+6.JQUERY 3.6.11
+7.GMAP.JS
+
+
 ## Belajar Website Dimana , Mulai Dari Mana ?
 1. Web Programming UNPAS
+disini lengkap banget dari nol bener2 dari nol, videonya cukup panjang jadi prepare liburan semester kalian buat nonton ini kalau mau bisa website ,
+ataupun bisa ke documentasinya langsung utk framework klo lebih suka berbentuk tulisan.
 - https://www.youtube.com/c/WebProgrammingUNPAS
 
 ## File File Penting
