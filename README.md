@@ -23,13 +23,13 @@ fitur fitur yang saat ini ingin dikembangkan oleh HIMAMO :
 6. Touch Of Design
 
 #CURRENT RESOURCE
-1.PHP NATIVE LOGIN
-2.BOOTSTRAP 5.03
-3.SWEETALERT2
-4.GSAP
-5.OWLCAROUSEL
-6.JQUERY 3.6.11
-7.GMAP.JS
+1. PHP NATIVE LOGIN
+2. BOOTSTRAP 5.03
+3. SWEETALERT2
+4. GSAP
+5. OWLCAROUSEL
+6. JQUERY 3.6.11
+7. GMAP.JS
 
 
 ## Belajar Website Dimana , Mulai Dari Mana ?
